@@ -1,5 +1,3 @@
-
-
 document.addEventListener("DOMContentLoaded", () => {
   const form = document.getElementById("site-search-form");
   const input = document.getElementById("site-search");
@@ -46,6 +44,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const getCategory = (url, title = "") => {
     const normalizedUrl = normalize(url);
+    const normalizedTitle = normalize(title);
 
     if (normalizedUrl.includes("/articles/tech/")) {
       return "tech";
@@ -63,26 +62,24 @@ document.addEventListener("DOMContentLoaded", () => {
       return "student";
     }
 
-    const lowerTitle = normalize(title);
-
     if (
-      lowerTitle.includes("tech") ||
-      lowerTitle.includes("saas")
+      normalizedTitle.includes("tech") ||
+      normalizedTitle.includes("saas")
     ) {
       return "tech";
     }
 
-    if (lowerTitle.includes("cyber")) {
+    if (normalizedTitle.includes("cyber")) {
       return "cybersecurity";
     }
 
-    if (lowerTitle.includes("b2b")) {
+    if (normalizedTitle.includes("b2b")) {
       return "b2b";
     }
 
     if (
-      lowerTitle.includes("student") ||
-      lowerTitle.includes("lesson")
+      normalizedTitle.includes("student") ||
+      normalizedTitle.includes("lesson")
     ) {
       return "student";
     }
@@ -107,9 +104,7 @@ document.addEventListener("DOMContentLoaded", () => {
       return "Lesson";
     }
 
-    if (
-      url.includes("/articles/")
-    ) {
+    if (url.includes("/articles/")) {
       return "Article";
     }
 
@@ -133,9 +128,7 @@ document.addEventListener("DOMContentLoaded", () => {
           return data.datePublished;
         }
 
-        if (
-          Array.isArray(data)
-        ) {
+        if (Array.isArray(data)) {
           const article = data.find(
             (item) =>
               item &&
@@ -148,13 +141,12 @@ document.addEventListener("DOMContentLoaded", () => {
           }
         }
       } catch (error) {
-        /* Ignore malformed JSON-LD blocks. */
+        continue;
       }
     }
 
-    const timeElement = documentObject.querySelector(
-      "time[datetime]"
-    );
+    const timeElement =
+      documentObject.querySelector("time[datetime]");
 
     return timeElement
       ? timeElement.getAttribute("datetime")
@@ -180,7 +172,9 @@ document.addEventListener("DOMContentLoaded", () => {
   };
 
   const buildSnippet = (text, query) => {
-    const cleanText = text.replace(/\s+/g, " ").trim();
+    const cleanText = String(text || "")
+      .replace(/\s+/g, " ")
+      .trim();
 
     if (!cleanText) {
       return "Explore this resource on Avenqora Vortax.";
@@ -216,11 +210,16 @@ document.addEventListener("DOMContentLoaded", () => {
   };
 
   const extractDocumentData = (documentObject, url) => {
-    const titleElement = documentObject.querySelector("title");
-    const descriptionElement = documentObject.querySelector(
-      'meta[name="description"]'
-    );
-    const h1Element = documentObject.querySelector("h1");
+    const titleElement =
+      documentObject.querySelector("title");
+
+    const descriptionElement =
+      documentObject.querySelector(
+        'meta[name="description"]'
+      );
+
+    const h1Element =
+      documentObject.querySelector("h1");
 
     const title =
       titleElement?.textContent?.trim() ||
@@ -228,8 +227,9 @@ document.addEventListener("DOMContentLoaded", () => {
       "Avenqora Vortax";
 
     const description =
-      descriptionElement?.getAttribute("content")?.trim() ||
-      "";
+      descriptionElement
+        ?.getAttribute("content")
+        ?.trim() || "";
 
     const contentRoot =
       documentObject.querySelector(".article-content") ||
@@ -237,8 +237,9 @@ document.addEventListener("DOMContentLoaded", () => {
       documentObject.body;
 
     const text =
-      contentRoot?.textContent?.replace(/\s+/g, " ").trim() ||
-      "";
+      contentRoot?.textContent
+        ?.replace(/\s+/g, " ")
+        .trim() || "";
 
     const category = getCategory(url, title);
 
@@ -271,9 +272,8 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     const html = await response.text();
-    const parser = new DOMParser();
 
-    return parser.parseFromString(
+    return new DOMParser().parseFromString(
       html,
       "text/html"
     );
@@ -294,28 +294,21 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const xmlText = await response.text();
 
-    const parser = new DOMParser();
-    const xml = parser.parseFromString(
-      xmlText,
-      "application/xml"
-    );
+    const xml =
+      new DOMParser().parseFromString(
+        xmlText,
+        "application/xml"
+      );
 
-    const parserError = xml.querySelector("parsererror");
-
-    if (parserError) {
+    if (xml.querySelector("parsererror")) {
       throw new Error("Invalid sitemap XML.");
     }
 
-    return [
-      ...xml.querySelectorAll("loc")
-    ]
+    return [...xml.querySelectorAll("loc")]
       .map((node) => node.textContent.trim())
       .filter((url) => url.endsWith(".html"))
-      .filter(
-        (url) =>
-          !url.endsWith("/404.html") &&
-          !url.endsWith("/search.html")
-      )
+      .filter((url) => !url.endsWith("/404.html"))
+      .filter((url) => !url.endsWith("/search.html"))
       .filter(
         (url, index, array) =>
           array.indexOf(url) === index
@@ -324,7 +317,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const loadContentIndex = async () => {
     const urls = await extractSitemapUrls();
-
     const results = [];
     const concurrency = 5;
 
@@ -338,17 +330,18 @@ document.addEventListener("DOMContentLoaded", () => {
         start + concurrency
       );
 
-      const batchResults = await Promise.allSettled(
-        batch.map(async (url) => {
-          const documentObject =
-            await fetchHtmlDocument(url);
+      const batchResults =
+        await Promise.allSettled(
+          batch.map(async (url) => {
+            const documentObject =
+              await fetchHtmlDocument(url);
 
-          return extractDocumentData(
-            documentObject,
-            url
-          );
-        })
-      );
+            return extractDocumentData(
+              documentObject,
+              url
+            );
+          })
+        );
 
       batchResults.forEach((result) => {
         if (result.status === "fulfilled") {
@@ -370,56 +363,45 @@ document.addEventListener("DOMContentLoaded", () => {
     let score = 0;
 
     queryTokens.forEach((token) => {
-      const title = item.normalizedTitle;
-      const description = item.normalizedDescription;
-      const text = item.normalizedText;
-
-      if (title === token) {
+      if (item.normalizedTitle === token) {
         score += 120;
       }
 
-      if (title.includes(token)) {
+      if (item.normalizedTitle.includes(token)) {
         score += 80;
       }
 
-      if (description.includes(token)) {
+      if (
+        item.normalizedDescription.includes(
+          token
+        )
+      ) {
         score += 40;
       }
 
-      if (text.includes(token)) {
+      if (
+        item.normalizedText.includes(token)
+      ) {
         score += 10;
       }
 
-      const tokenCount =
-        (
-          text.match(
-            new RegExp(
-              token.replace(
-                /[.*+?^${}()|[\]\\]/g,
-                "\\$&"
-              ),
-              "g"
-            )
-          ) || []
-        ).length;
+      const safeToken = token.replace(
+        /[.*+?^${}()|[\]\\]/g,
+        "\\$&"
+      );
+
+      const matches =
+        item.normalizedText.match(
+          new RegExp(safeToken, "g")
+        ) || [];
 
       score += Math.min(
-        tokenCount * 2,
+        matches.length * 2,
         20
       );
     });
 
     return score;
-  };
-
-  const categoryMatches = (
-    itemCategory,
-    requestedCategory
-  ) => {
-    return (
-      requestedCategory === "all" ||
-      itemCategory === requestedCategory
-    );
   };
 
   const renderResults = (
@@ -432,15 +414,17 @@ document.addEventListener("DOMContentLoaded", () => {
     const normalizedQuery = normalize(query);
 
     const queryTokens = normalizedQuery
-      ? normalizedQuery.split(/\s+/).filter(Boolean)
+      ? normalizedQuery
+          .split(/\s+/)
+          .filter(Boolean)
       : [];
 
-    let results = items.filter((item) =>
-      categoryMatches(
-        item.category,
-        requestedCategory
-      )
-    );
+    let results = items.filter((item) => {
+      return (
+        requestedCategory === "all" ||
+        item.category === requestedCategory
+      );
+    });
 
     if (queryTokens.length > 0) {
       results = results
@@ -466,26 +450,20 @@ document.addEventListener("DOMContentLoaded", () => {
         );
     } else {
       results.sort((a, b) => {
-        const dateA = new Date(
-          a.date || 0
-        ).getTime();
+        const dateA =
+          new Date(a.date || 0).getTime();
 
-        const dateB = new Date(
-          b.date || 0
-        ).getTime();
+        const dateB =
+          new Date(b.date || 0).getTime();
 
         return (
           dateB - dateA ||
-          a.title.localeCompare(
-            b.title
-          )
+          a.title.localeCompare(b.title)
         );
       });
     }
 
-    const resultCount = results.length;
-
-    if (resultCount === 0) {
+    if (results.length === 0) {
       resultsContainer.innerHTML = `
         <article class="category-card">
           <h2>No matching content found</h2>
@@ -513,8 +491,7 @@ document.addEventListener("DOMContentLoaded", () => {
       const article =
         document.createElement("article");
 
-      article.className =
-        "article-card";
+      article.className = "article-card";
 
       const description =
         item.description ||
@@ -586,52 +563,42 @@ document.addEventListener("DOMContentLoaded", () => {
       fragment.appendChild(article);
     });
 
-    resultsContainer.appendChild(
-      fragment
-    );
+    resultsContainer.appendChild(fragment);
 
-    status.textContent =
-      query
-        ? `${resultCount} result${
-            resultCount === 1
-              ? ""
-              : "s"
-          } found for "${query}".`
-        : `${resultCount} searchable resources available.`;
+    status.textContent = query
+      ? `${results.length} result${
+          results.length === 1
+            ? ""
+            : "s"
+        } found for "${query}".`
+      : `${results.length} searchable resources available.`;
 
     resultsContainer.setAttribute(
       "aria-busy",
       "false"
     );
 
-    if (window.location.hash === "#results") {
-      return;
-    }
-
     if (query) {
+      const params = new URLSearchParams();
+
+      params.set("q", query);
+
+      if (requestedCategory !== "all") {
+        params.set(
+          "category",
+          requestedCategory
+        );
+      }
+
       window.history.replaceState(
         null,
         "",
-        `search.html?q=${encodeURIComponent(
-          query
-        )}${
-          requestedCategory !== "all"
-            ? `&category=${encodeURIComponent(
-                requestedCategory
-              )}`
-            : ""
-        }#results`
+        `search.html?${params.toString()}#results`
       );
     }
   };
 
   const runSearch = () => {
-    const query =
-      input.value.trim();
-
-    const requestedCategory =
-      categorySelect.value;
-
     if (!isReady) {
       status.textContent =
         "The search index is still loading.";
@@ -640,8 +607,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
     renderResults(
       contentIndex,
-      query,
-      requestedCategory
+      input.value.trim(),
+      categorySelect.value
     );
   };
 
@@ -669,8 +636,7 @@ document.addEventListener("DOMContentLoaded", () => {
         "pages"
       ].includes(category)
     ) {
-      categorySelect.value =
-        category;
+      categorySelect.value = category;
     }
 
     return {
@@ -731,8 +697,6 @@ document.addEventListener("DOMContentLoaded", () => {
         error
       );
 
-      isReady = false;
-
       status.textContent =
         "Search is temporarily unavailable. Please use the category pages to browse the site.";
 
@@ -744,8 +708,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
           <p>
             The search index could not be loaded.
-            The rest of the website remains available through
-            the main navigation.
+            The rest of the website remains available
+            through the main navigation.
           </p>
 
           <a
