@@ -1,100 +1,223 @@
-
-
-```html id="5k7m2q"
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+  <meta name="robots" content="noindex,follow">
+  <meta name="description" content="The requested Avenqora Vortax page could not be found.">
   <title>Page Not Found | Avenqora Vortax</title>
 
-  <meta
-    name="description"
-    content="The page you are looking for could not be found on Avenqora Vortax."
-  >
+  <script>
+    (function () {
+      const path = window.location.pathname || "/";
+      const base =
+        path === "/avenqora-vortax" || path.indexOf("/avenqora-vortax/") === 0
+          ? "/avenqora-vortax/"
+          : "/";
 
-  <meta name="robots" content="noindex, follow">
+      const finalName = path.substring(path.lastIndexOf("/") + 1).toLowerCase();
 
-  <link rel="stylesheet" href="style.css">
+      const rootPages = {
+        "index.html": "index.html",
+        "tech-saas.html": "tech-saas.html",
+        "cybersecurity.html": "cybersecurity.html",
+        "b2b.html": "b2b.html",
+        "student-hub.html": "student-hub.html",
+        "about.html": "about.html",
+        "team.html": "team.html",
+        "contact.html": "contact.html",
+        "search.html": "search.html",
+        "privacy-policy.html": "privacy-policy.html",
+        "terms.html": "terms.html",
+        "editorial-policy.html": "editorial-policy.html"
+      };
+
+      const expectedRootPath =
+        rootPages[finalName]
+          ? (base + rootPages[finalName]).toLowerCase()
+          : "";
+
+      if (
+        expectedRootPath &&
+        path.toLowerCase() !== expectedRootPath
+      ) {
+        const query = window.location.search || "";
+        const hash = window.location.hash || "";
+
+        window.location.replace(
+          base + rootPages[finalName] + query + hash
+        );
+
+        return;
+      }
+
+      document.write(
+        '<link rel="stylesheet" href="' +
+        base +
+        'style.css">'
+      );
+
+      document.write(
+        '<script src="' +
+        base +
+        'script.js" defer><\/script>'
+      );
+    })();
+  </script>
 </head>
 
 <body>
 
   <header class="site-header">
+    <div class="container">
 
-    <div class="container header-inner">
+      <nav class="site-nav" aria-label="Main navigation">
 
-      <a class="site-logo" href="index.html">
-        Avenqora Vortax
-      </a>
+        <a
+          class="brand"
+          href="#"
+          data-site-link="index.html"
+        >
+          Avenqora Vortax
+        </a>
 
-      <button
-        class="menu-toggle"
-        type="button"
-        aria-label="Open navigation"
-        aria-expanded="false"
-        data-menu-button
-      >
-        ☰
-      </button>
+        <button
+          class="nav-toggle"
+          type="button"
+          aria-expanded="false"
+          aria-label="Open navigation"
+          data-nav-toggle
+        >
+          ☰
+        </button>
 
-      <nav
-        class="main-nav"
-        aria-label="Main navigation"
-        data-navigation
-      >
-        <a href="index.html">Home</a>
-        <a href="tech-saas.html">Tech &amp; SaaS</a>
-        <a href="cybersecurity.html">Cybersecurity</a>
-        <a href="b2b.html">B2B Solutions</a>
-        <a href="student-hub.html">Student Hub</a>
-        <a href="search.html">Search</a>
+        <div
+          class="nav-links"
+          data-nav-menu
+        >
+          <a href="#" data-site-link="index.html">
+            Home
+          </a>
+
+          <a href="#" data-site-link="tech-saas.html">
+            Tech &amp; SaaS
+          </a>
+
+          <a href="#" data-site-link="cybersecurity.html">
+            Cybersecurity
+          </a>
+
+          <a href="#" data-site-link="b2b.html">
+            B2B Solutions
+          </a>
+
+          <a href="#" data-site-link="student-hub.html">
+            Student Hub
+          </a>
+
+          <a href="#" data-site-link="search.html">
+            Search
+          </a>
+        </div>
+
       </nav>
 
     </div>
-
   </header>
 
-  <main class="error-page">
+  <main>
 
-    <section class="section">
-
+    <section class="hero section">
       <div class="container">
 
-        <div class="error-card">
+        <span class="eyebrow">
+          AVENQORA VORTAX
+        </span>
 
-          <p class="error-code">
-            404
-          </p>
+        <h1>
+          We couldn't find that page.
+        </h1>
+
+        <p>
+          The link may be outdated, moved, or typed incorrectly.
+          Use the navigation below to continue exploring the
+          publication and Student Hub.
+        </p>
+
+        <div class="button-group">
+
+          <a
+            class="button"
+            href="#"
+            data-site-link="index.html"
+          >
+            Go to Home
+          </a>
+
+          <a
+            class="button button-secondary"
+            href="#"
+            data-site-link="search.html"
+          >
+            Search the Site
+          </a>
+
+        </div>
+
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+
+        <div class="category-card">
 
           <span class="eyebrow">
-            Page Not Found
+            BROWSE
           </span>
 
-          <h1>
-            We couldn't find that page.
-          </h1>
+          <h2>
+            Explore Avenqora Vortax
+          </h2>
 
           <p>
-            The page may have moved, the address may be incorrect,
-            or the content may no longer be available at this URL.
+            Read technology and SaaS coverage, explore
+            cybersecurity articles, browse B2B solutions,
+            or open the Student Hub for learning resources.
           </p>
 
-          <div class="hero-actions">
+          <div class="button-group">
 
             <a
-              class="button"
-              href="index.html"
+              class="button button-secondary"
+              href="#"
+              data-site-link="tech-saas.html"
             >
-              Back to Home
+              Tech &amp; SaaS
             </a>
 
             <a
               class="button button-secondary"
-              href="search.html"
+              href="#"
+              data-site-link="cybersecurity.html"
             >
-              Search Avenqora Vortax
+              Cybersecurity
+            </a>
+
+            <a
+              class="button button-secondary"
+              href="#"
+              data-site-link="b2b.html"
+            >
+              B2B Solutions
+            </a>
+
+            <a
+              class="button button-secondary"
+              href="#"
+              data-site-link="student-hub.html"
+            >
+              Student Hub
             </a>
 
           </div>
@@ -102,128 +225,55 @@
         </div>
 
       </div>
-
     </section>
 
   </main>
 
   <footer class="site-footer">
-
-    <div class="container footer-grid">
-
-      <div class="footer-brand">
-
-        <a class="site-logo footer-logo" href="index.html">
-          Avenqora Vortax
-        </a>
-
-        <p>
-          Premium technology publication and global student
-          learning platform.
-        </p>
-
-      </div>
-
-      <div>
-
-        <h3>
-          Explore
-        </h3>
-
-        <a href="tech-saas.html">
-          Tech &amp; SaaS
-        </a>
-
-        <a href="cybersecurity.html">
-          Cybersecurity
-        </a>
-
-        <a href="b2b.html">
-          B2B Solutions
-        </a>
-
-        <a href="student-hub.html">
-          Student Hub
-        </a>
-
-        <a href="search.html">
-          Search
-        </a>
-
-      </div>
-
-      <div>
-
-        <h3>
-          Company
-        </h3>
-
-        <a href="about.html">
-          About
-        </a>
-
-        <a href="team.html">
-          Team
-        </a>
-
-        <a href="contact.html">
-          Contact
-        </a>
-
-      </div>
-
-      <div>
-
-        <h3>
-          Policies
-        </h3>
-
-        <a href="privacy-policy.html">
-          Privacy Policy
-        </a>
-
-        <a href="terms.html">
-          Terms &amp; Conditions
-        </a>
-
-        <a href="editorial-policy.html">
-          Editorial Policy
-        </a>
-
-      </div>
-
-    </div>
-
-    <div class="container footer-contact">
+    <div class="container">
 
       <p>
-        General:
-        <a href="mailto:avenqoravortax@gmail.com">
-          avenqoravortax@gmail.com
-        </a>
+        Avenqora Vortax — Technology • Cybersecurity • B2B • Learning
       </p>
 
       <p>
-        Editorial:
-        <a href="mailto:avenqoravortax.editor@gmail.com">
-          avenqoravortax.editor@gmail.com
-        </a>
+        General: avenqoravortax@gmail.com ·
+        Editorial: avenqoravortax.editor@gmail.com
       </p>
 
     </div>
-
-    <div class="container footer-bottom">
-
-      <p>
-        © 2026 Avenqora Vortax. All rights reserved.
-      </p>
-
-    </div>
-
   </footer>
 
-  <script src="script.js" defer></script>
+  <script>
+    (function () {
+
+      const path =
+        window.location.pathname || "/";
+
+      const base =
+        path === "/avenqora-vortax" ||
+        path.indexOf("/avenqora-vortax/") === 0
+          ? "/avenqora-vortax/"
+          : "/";
+
+      document
+        .querySelectorAll("[data-site-link]")
+        .forEach(function (link) {
+
+          const target =
+            link.getAttribute("data-site-link");
+
+          if (target) {
+            link.setAttribute(
+              "href",
+              base + target
+            );
+          }
+
+        });
+
+    })();
+  </script>
 
 </body>
 </html>
-```
