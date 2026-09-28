@@ -32,23 +32,61 @@
         "editorial-policy.html": "editorial-policy.html"
       };
 
-      const expectedRootPath =
-        rootPages[finalName]
-          ? (base + rootPages[finalName]).toLowerCase()
-          : "";
+      const knownFile = {
+        "tech-article-1.html": "articles/tech/tech-article-1.html",
+        "tech-article-2.html": "articles/tech/tech-article-2.html",
+        "tech-article-3.html": "articles/tech/tech-article-3.html",
+        "tech-article-4.html": "articles/tech/tech-article-4.html",
+        "tech-article-5.html": "articles/tech/tech-article-5.html",
+        "tech-article-6.html": "articles/tech/tech-article-6.html",
+        "tech-article-7.html": "articles/tech/tech-article-7.html",
+        "tech-article-8.html": "articles/tech/tech-article-8.html",
+        "tech-article-9.html": "articles/tech/tech-article-9.html",
+        "tech-article-10.html": "articles/tech/tech-article-10.html",
+        "cyber-article-1.html": "articles/cybersecurity/cyber-article-1.html",
+        "cyber-article-2.html": "articles/cybersecurity/cyber-article-2.html",
+        "cyber-article-3.html": "articles/cybersecurity/cyber-article-3.html",
+        "cyber-article-4.html": "articles/cybersecurity/cyber-article-4.html",
+        "cyber-article-5.html": "articles/cybersecurity/cyber-article-5.html",
+        "cyber-article-6.html": "articles/cybersecurity/cyber-article-6.html",
+        "cyber-article-7.html": "articles/cybersecurity/cyber-article-7.html",
+        "cyber-article-8.html": "articles/cybersecurity/cyber-article-8.html",
+        "cyber-article-9.html": "articles/cybersecurity/cyber-article-9.html",
+        "cyber-article-10.html": "articles/cybersecurity/cyber-article-10.html",
+        "b2b-article-1.html": "articles/b2b/b2b-article-1.html",
+        "b2b-article-2.html": "articles/b2b/b2b-article-2.html",
+        "b2b-article-3.html": "articles/b2b/b2b-article-3.html",
+        "b2b-article-4.html": "articles/b2b/b2b-article-4.html",
+        "b2b-article-5.html": "articles/b2b/b2b-article-5.html",
+        "b2b-article-6.html": "articles/b2b/b2b-article-6.html",
+        "b2b-article-7.html": "articles/b2b/b2b-article-7.html",
+        "b2b-article-8.html": "articles/b2b/b2b-article-8.html",
+        "b2b-article-9.html": "articles/b2b/b2b-article-9.html",
+        "b2b-article-10.html": "articles/b2b/b2b-article-10.html",
+        "technology-lesson-1.html": "student-hub/technology/technology-lesson-1.html",
+        "technology-lesson-2.html": "student-hub/technology/technology-lesson-2.html",
+        "cybersecurity-lesson-1.html": "student-hub/cybersecurity/cybersecurity-lesson-1.html",
+        "cybersecurity-lesson-2.html": "student-hub/cybersecurity/cybersecurity-lesson-2.html",
+        "business-lesson-1.html": "student-hub/business/business-lesson-1.html",
+        "business-lesson-2.html": "student-hub/business/business-lesson-2.html",
+        "digital-skills-lesson-1.html": "student-hub/digital-skills/digital-skills-lesson-1.html",
+        "digital-skills-lesson-2.html": "student-hub/digital-skills/digital-skills-lesson-2.html"
+      };
 
-      if (
-        expectedRootPath &&
-        path.toLowerCase() !== expectedRootPath
-      ) {
-        const query = window.location.search || "";
-        const hash = window.location.hash || "";
+      const target = rootPages[finalName] || knownFile[finalName];
 
-        window.location.replace(
-          base + rootPages[finalName] + query + hash
-        );
+      if (target) {
+        const expected =
+          (base + target).toLowerCase();
 
-        return;
+        if (path.toLowerCase() !== expected) {
+          const query = window.location.search || "";
+          const hash = window.location.hash || "";
+          window.location.replace(
+            base + target + query + hash
+          );
+          return;
+        }
       }
 
       document.write(
