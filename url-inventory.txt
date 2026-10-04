@@ -1,0 +1,71 @@
+# Current Public URL Inventory
+
+Generated from the repository on 2026-10-04 before SEO/AEO overhaul.
+
+## Root HTML
+https://avenqoravortax.com/
+https://avenqoravortax.com/about.html
+https://avenqoravortax.com/team.html
+https://avenqoravortax.com/contact.html
+https://avenqoravortax.com/tech-saas.html
+https://avenqoravortax.com/cybersecurity.html
+https://avenqoravortax.com/b2b.html
+https://avenqoravortax.com/student-hub.html
+https://avenqoravortax.com/privacy-policy.html
+https://avenqoravortax.com/terms.html
+https://avenqoravortax.com/editorial-policy.html
+https://avenqoravortax.com/search.html
+https://avenqoravortax.com/404.html
+
+## Tech articles
+https://avenqoravortax.com/articles/tech/tech-article-1.html
+https://avenqoravortax.com/articles/tech/tech-article-2.html
+https://avenqoravortax.com/articles/tech/tech-article-3.html
+https://avenqoravortax.com/articles/tech/tech-article-4.html
+https://avenqoravortax.com/articles/tech/tech-article-5.html
+https://avenqoravortax.com/articles/tech/tech-article-6.html
+https://avenqoravortax.com/articles/tech/tech-article-7.html
+https://avenqoravortax.com/articles/tech/tech-article-8.html
+https://avenqoravortax.com/articles/tech/tech-article-9.html
+https://avenqoravortax.com/articles/tech/tech-article-10.html
+https://avenqoravortax.com/articles/tech/tech-article-11.html
+
+## Cybersecurity articles
+https://avenqoravortax.com/articles/cybersecurity/cyber-article-1.html
+https://avenqoravortax.com/articles/cybersecurity/cyber-article-2.html
+https://avenqoravortax.com/articles/cybersecurity/cyber-article-3.html
+https://avenqoravortax.com/articles/cybersecurity/cyber-article-4.html
+https://avenqoravortax.com/articles/cybersecurity/cyber-article-5.html
+https://avenqoravortax.com/articles/cybersecurity/cyber-article-6.html
+https://avenqoravortax.com/articles/cybersecurity/cyber-article-7.html
+https://avenqoravortax.com/articles/cybersecurity/cyber-article-8.html
+https://avenqoravortax.com/articles/cybersecurity/cyber-article-9.html
+https://avenqoravortax.com/articles/cybersecurity/cyber-article-10.html
+https://avenqoravortax.com/articles/cybersecurity/cyber-article-11.html
+
+## B2B articles
+https://avenqoravortax.com/articles/b2b/b2b-article-1.html
+https://avenqoravortax.com/articles/b2b/b2b-article-2.html
+https://avenqoravortax.com/articles/b2b/b2b-article-3.html
+https://avenqoravortax.com/articles/b2b/b2b-article-4.html
+https://avenqoravortax.com/articles/b2b/b2b-article-5.html
+https://avenqoravortax.com/articles/b2b/b2b-article-6.html
+https://avenqoravortax.com/articles/b2b/b2b-article-7.html
+https://avenqoravortax.com/articles/b2b/b2b-article-8.html
+https://avenqoravortax.com/articles/b2b/b2b-article-9.html
+https://avenqoravortax.com/articles/b2b/b2b-article-10.html
+https://avenqoravortax.com/articles/b2b/b2b-article-11.html
+
+## Student Hub lessons
+https://avenqoravortax.com/student-hub/technology/technology-lesson-1.html
+https://avenqoravortax.com/student-hub/technology/technology-lesson-2.html
+https://avenqoravortax.com/student-hub/technology/technology-lesson-3.html
+https://avenqoravortax.com/student-hub/cybersecurity/cybersecurity-lesson-1.html
+https://avenqoravortax.com/student-hub/cybersecurity/cybersecurity-lesson-2.html
+https://avenqoravortax.com/student-hub/cybersecurity/cybersecurity-lesson-3.html
+https://avenqoravortax.com/student-hub/business/business-lesson-1.html
+https://avenqoravortax.com/student-hub/business/business-lesson-2.html
+https://avenqoravortax.com/student-hub/business/business-lesson-3.html
+https://avenqoravortax.com/student-hub/digital-skills/digital-skills-lesson-1.html
+https://avenqoravortax.com/student-hub/digital-skills/digital-skills-lesson-2.html
+https://avenqoravortax.com/student-hub/digital-skills/digital-skills-lesson-3.html
