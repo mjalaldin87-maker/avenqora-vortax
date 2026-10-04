@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://mjalaldin87-maker.github.io/avenqora-vortax/sitemap.xml
+Sitemap: https://avenqoravortax.com/sitemap.xml
