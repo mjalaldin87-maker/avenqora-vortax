@@ -656,3 +656,7 @@ select {
 .hero-section .button-secondary:hover {
   background: rgba(255, 255, 255, 0.12);
 }
+
+
+/* Author profile initials avatar */
+.author-initials{display:inline-flex;align-items:center;justify-content:center;width:72px;height:72px;border-radius:50%;border:2px solid currentColor;font-weight:700;font-size:1.35rem;margin:0 0 1rem;}
