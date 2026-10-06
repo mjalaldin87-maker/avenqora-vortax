@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
+<title id="title">Avenqora Vortax</title><desc id="desc">Technology, cybersecurity, B2B solutions and student learning.</desc>
+<defs><linearGradient id="g" x1="0" x2="1" y1="0" y2="1"><stop offset="0" stop-color="#111827"/><stop offset=".52" stop-color="#4c1d95"/><stop offset="1" stop-color="#1d4ed8"/></linearGradient></defs>
+<rect width="1200" height="630" fill="url(#g)"/>
+<circle cx="1040" cy="80" r="180" fill="#ffffff" opacity=".08"/><circle cx="160" cy="570" r="220" fill="#ffffff" opacity=".06"/>
+<text x="90" y="230" fill="#ffffff" font-family="Arial,Helvetica,sans-serif" font-size="68" font-weight="800">Avenqora Vortax</text>
+<text x="94" y="305" fill="#e5e7eb" font-family="Arial,Helvetica,sans-serif" font-size="30">Technology • Cybersecurity • B2B • Learning</text>
+<text x="94" y="385" fill="#ffffff" font-family="Arial,Helvetica,sans-serif" font-size="24">Practical knowledge for modern digital work and study.</text>
+</svg>
