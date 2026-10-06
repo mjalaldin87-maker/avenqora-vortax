@@ -700,3 +700,13 @@ body[data-category-page] .static-article-card:nth-child(4n+3),
 body[data-category-page] .static-article-card:nth-child(4n+4){
   border-top-width:4px;
 }
+
+
+/* Phase 2 AEO article structure */
+.aeo-quick-answer{margin:2rem 0;padding:1.5rem;border:1px solid #d9e2ec;border-radius:1rem;background:#f7f9fc}
+.aeo-quick-answer h2{margin-top:0}
+.aeo-answer{font-size:1.05rem;line-height:1.7}
+.key-takeaways{padding-left:1.25rem;line-height:1.7}
+.article-faq{margin-top:2rem;padding-top:1.5rem;border-top:1px solid #d9e2ec}
+.faq-item{margin:1rem 0;padding:1rem 0}
+.faq-item h3{margin-bottom:.4rem}
