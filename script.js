@@ -1,4 +1,15 @@
 document.addEventListener("DOMContentLoaded", () => {
+  const main=document.querySelector("main");
+  if(main && !main.id) main.id="main-content";
+  if(main && !document.querySelector(".skip-to-content")){
+    const skip=document.createElement("a"); skip.className="skip-to-content"; skip.href="#main-content"; skip.textContent="Skip to content"; document.body.prepend(skip);
+  }
+  document.querySelectorAll('a[href^="http"]').forEach((link)=>{
+    if(link.origin !== window.location.origin) link.rel="noopener";
+  });
+});
+
+document.addEventListener("DOMContentLoaded", () => {
   if (!document.querySelector('link[rel="icon"]')) {
     const icon=document.createElement("link"); icon.rel="icon"; icon.href="/images/favicon.svg"; icon.type="image/svg+xml"; document.head.appendChild(icon);
   }
