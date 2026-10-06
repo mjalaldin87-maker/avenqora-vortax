@@ -1,4 +1,13 @@
 document.addEventListener("DOMContentLoaded", () => {
+  if (!document.querySelector('link[rel="icon"]')) {
+    const icon=document.createElement("link"); icon.rel="icon"; icon.href="/images/favicon.svg"; icon.type="image/svg+xml"; document.head.appendChild(icon);
+  }
+  if (!document.querySelector('link[rel="apple-touch-icon"]')) {
+    const apple=document.createElement("link"); apple.rel="apple-touch-icon"; apple.href="/images/og-default.png"; document.head.appendChild(apple);
+  }
+});
+
+document.addEventListener("DOMContentLoaded", () => {
   const menuButton = document.querySelector("[data-menu-button]");
   const navigation = document.querySelector("[data-navigation]");
   const closeNavigation = () => {
