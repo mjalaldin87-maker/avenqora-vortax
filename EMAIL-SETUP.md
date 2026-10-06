@@ -47,7 +47,7 @@ Create:
 The site currently keeps the existing Gmail addresses until you confirm the new mailboxes are working.
 
 ## 7. Site switch
-When ready, update only `contact-config.js`:
+When ready, update the two mailbox constants in `script.js`:
 - general → contact@avenqoravortax.com
 - editorial → editorial@avenqoravortax.com
 
