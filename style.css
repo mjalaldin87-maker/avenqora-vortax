@@ -684,3 +684,19 @@ select {
 .visual-b2b{background:linear-gradient(135deg,#052e16,#15803d)}
 .visual-student{background:linear-gradient(135deg,#7c2d12,#ea580c)}
 .hero-text-gradient{min-height:620px;display:flex;align-items:center;background:linear-gradient(135deg,#111827 0%,#4c1d95 52%,#1d4ed8 100%)}
+
+/* Category-specific static card accents */
+body[data-category-page="tech"] .static-article-card{--card-accent:#5b21b6;border-top-color:#5b21b6}
+body[data-category-page="cybersecurity"] .static-article-card{--card-accent:#1d4ed8;border-top-color:#1d4ed8}
+body[data-category-page="b2b"] .static-article-card{--card-accent:#15803d;border-top-color:#15803d}
+
+/* Simple two-colour homepage hero */
+.hero-text-gradient{background:linear-gradient(135deg,#4c1d95 0%,#1d4ed8 100%)}
+
+/* Remove category-cycling colours so each category keeps one accent */
+body[data-category-page] .static-article-card:nth-child(4n+1),
+body[data-category-page] .static-article-card:nth-child(4n+2),
+body[data-category-page] .static-article-card:nth-child(4n+3),
+body[data-category-page] .static-article-card:nth-child(4n+4){
+  border-top-width:4px;
+}
