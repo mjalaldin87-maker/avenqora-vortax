@@ -26,7 +26,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 // Centralized mailbox switching: update contact-config.js only when mailboxes change.
 document.addEventListener("DOMContentLoaded", () => {
-  const c = window.AVENQORA_CONTACTS || {};
+  const c = { general: "avenqoravortax@gmail.com", editorial: "avenqoravortax.editor@gmail.com" };
   document.querySelectorAll('a[href^="mailto:"]').forEach((link) => {
     const current = link.getAttribute("href");
     if (current === "mailto:avenqoravortax@gmail.com" && c.general) { link.href = "mailto:" + c.general; link.textContent = c.general; }
