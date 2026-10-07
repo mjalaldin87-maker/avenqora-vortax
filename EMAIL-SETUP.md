@@ -12,9 +12,9 @@ This file prepares the DNS checklist. Exact Zoho hostnames, DKIM selector/value 
 Add the MX records shown by Zoho for the selected mail region/account.
 - Type: MX
 - Host/Name: @
-- Value: [FILL IN — exact Zoho MX value]
-- Priority: [FILL IN]
-- Add every MX record Zoho requires.
+- Value: mx.zoho.com
+- Priority: 10
+- Add: `mx.zoho.com` priority 10, `mx2.zoho.com` priority 20, and `mx3.zoho.com` priority 50. Confirm the values shown in Zoho Admin Console before saving, because Zoho can vary configuration by account/region.
 
 Remove conflicting MX records only after confirming they are not needed for another mail service.
 
@@ -22,7 +22,7 @@ Remove conflicting MX records only after confirming they are not needed for anot
 Add one SPF TXT record for the root domain.
 - Type: TXT
 - Host/Name: @
-- Value: [FILL IN — exact Zoho SPF value]
+- Value: v=spf1 include:zohomail.com -all
 Do not create multiple SPF TXT policies; merge authorized senders into one SPF record if another legitimate sender already exists.
 
 ## 4. DKIM
@@ -36,7 +36,7 @@ Publish the exact value Zoho provides, then verify DKIM in Zoho.
 Start with a monitoring policy.
 - Type: TXT
 - Host/Name: _dmarc
-- Value: [FILL IN — DMARC policy approved for this domain]
+- Value: v=DMARC1; p=none; rua=mailto:contact@avenqoravortax.com
 After reviewing reports and confirming legitimate senders, the policy can be tightened.
 
 ## 6. Create the mailboxes
@@ -44,7 +44,7 @@ Create:
 - contact@avenqoravortax.com
 - editorial@avenqoravortax.com
 
-The site currently keeps the existing Gmail addresses until you confirm the new mailboxes are working.
+The site currently keeps the existing Gmail addresses until you confirm the new mailboxes are working. DKIM selector/key remains account-specific and must be copied from the Zoho Admin Console after the domain is added.
 
 ## 7. Site switch
 When ready, update the two mailbox constants in `script.js`:
