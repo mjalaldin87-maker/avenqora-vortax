@@ -29,10 +29,10 @@ A static GitHub Pages publication and learning site covering Tech & SaaS, Cybers
 7. Add/update the article's JSON-LD Article and BreadcrumbList.
 8. Add the author byline and link it to the correct section on `team.html`.
 9. Keep a visible Last Updated value.
-10. Keep the Sources section and replace `[FILL IN]` with verified sources before publication.
+10. Keep the Sources section and use verified, topic-specific sources before publication.
 11. Check the title, description, canonical, OG and Twitter metadata.
 12. Run an internal-link check before committing.
 
 ## Content rules
 
-Do not invent sources, credentials, statistics, awards, testimonials, social profiles or other facts. Use `[FILL IN]` when a real-world detail still needs to be supplied or verified.
+Do not invent sources, credentials, statistics, awards, testimonials, social profiles or other facts. Do not publish a real-world detail until it has been verified.
