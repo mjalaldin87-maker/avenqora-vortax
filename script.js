@@ -14,13 +14,13 @@ document.addEventListener("DOMContentLoaded", () => {
       native_language_names: true,
       detect_browser_language: false,
       languages: [
-        "en","ur","ar","hi","pa","bn","zh-CN","zh-TW","es","fr","de","pt","ru","ja","ko",
-        "it","nl","tr","vi","id","ms","th","fa","he","uk","pl","ro","el","sv","no","da",
-        "fi","cs","sk","hu","bg","sr","hr","sl","lt","lv","et","is","ga","cy","eu","ca",
-        "gl","af","sq","am","hy","az","be","bs","my","km","lo","ka","kk","ky","uz","tg",
-        "mn","ne","si","ta","te","ml","kn","gu","mr","or","as","ps","sd","yi","sw","so",
-        "ha","ig","yo","zu","xh","st","sn","ny","rw","mg","mi","sm","to","fj","haw","ceb",
-        "jv","su","tl","eo","la","ht","lb","mk","mt","gd","ku","ckb","ug","tt","ba","cv"
+        "en","ar","bg","zh-CN","zh-TW","hr","cs","da","nl","fi","fr","de","el","hi","it",
+        "ja","ko","no","pl","pt","ro","ru","es","sv","ca","tl","iw","id","lv","lt","sr",
+        "sk","sl","uk","vi","sq","et","gl","hu","mt","th","tr","fa","af","ms","sw","ga",
+        "cy","be","is","mk","yi","hy","az","eu","ka","ht","ur","bn","bs","ceb","eo","gu",
+        "ha","hmn","ig","jw","kn","km","lo","la","mi","mr","mn","ne","pa","so","ta","te",
+        "yo","zu","my","ny","kk","mg","ml","si","st","su","tg","uz","am","co","haw","ku",
+        "ky","lb","ps","sm","gd","sn","sd","fy","xh"
       ],
       wrapper_selector: ".gtranslate_wrapper"
     };
