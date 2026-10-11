@@ -6,7 +6,7 @@
 
   <title>Choosing the Right SaaS Architecture as Your Product | AV</title>
 
-  <meta name="description" content="Understand choosing the right saas architecture as your product grows, with practical guidance on key concepts, decisions, risks, and steps you can apply.">
+  <meta name="description" content="Choose SaaS architecture based on workload, team capability, reliability, security and cost rather than adopting complexity before it is needed.">
 
   <meta name="robots" content="index, follow">
   <meta name="author" content="Zia Carter — Writer &amp; Editor">
@@ -791,7 +791,9 @@
                 reason to become independent.
               </p>
 
-              <h2>
+              <h2>Architecture decision worksheet</h2><p>Before moving from a monolith to microservices or adding a new infrastructure layer, write down the problem that the change is meant to solve. Architecture should respond to observed constraints and product requirements, not simply follow current trends.</p><div class="category-card category-blue"><h3>Questions to compare options</h3><ul><li><strong>Workload:</strong> Which measured traffic, data-volume or latency requirement is not being met?</li><li><strong>Change boundaries:</strong> Do parts of the system need independent deployment, or would clearer modules inside one application solve the problem?</li><li><strong>Reliability:</strong> What failure should be isolated, and how will dependencies, retries and recovery behave?</li><li><strong>Data consistency:</strong> Does splitting services introduce distributed transactions, duplicated data or harder debugging?</li><li><strong>Team readiness:</strong> Can the team operate monitoring, deployment, access control and incident response for the proposed design?</li><li><strong>Full cost:</strong> Include infrastructure, observability, network traffic, on-call work and developer time.</li><li><strong>Reversibility:</strong> Can the choice be piloted, measured and changed if it does not deliver the expected benefit?</li></ul></div><p>A modular monolith can be a strong choice when one team can safely develop and deploy the application together. Separate services may be justified when there are clear scaling, isolation, ownership or deployment needs—but they also create operational and data-management costs.</p><h2>Write down the trade-off and revisit it</h2><p>Record the decision, alternatives considered, evidence, risks and conditions that would trigger a review. Revisit architecture when actual workload, reliability needs, team structure or operating costs change. Avoid a large migration based only on anticipated growth that has not yet appeared.</p>
+
+<h2>
                 Final thoughts
               </h2>
 
@@ -942,7 +944,7 @@
 
       </section>
 
-    <section class="section"><div class="container"><div class="article-content"><h2>Sources</h2><p>[FILL IN — add real, topic-specific sources before publishing.]</p></div></div></section></article>
+    <section class="section"><div class="container"><div class="article-content"><h2>Sources and further reading</h2><ul><li><a href="https://learn.microsoft.com/en-us/azure/architecture/guide/architecture-styles/" target="_blank" rel="noopener noreferrer">Microsoft Azure Architecture Center: Architecture styles</a> — comparing common architecture approaches.</li><li><a href="https://12factor.net/" target="_blank" rel="noopener noreferrer">The Twelve-Factor App</a> — practices for building and operating modern software-as-a-service applications.</li><li><a href="https://sre.google/sre-book/availability-table/" target="_blank" rel="noopener noreferrer">Google SRE Book: Availability Table</a> — availability considerations across system designs.</li></ul><p>Architecture choices depend on the application's constraints and the team's ability to operate the resulting system.</p></div></div></section></article>
 
   </main>
 
