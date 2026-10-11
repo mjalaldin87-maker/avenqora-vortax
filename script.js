@@ -1,4 +1,43 @@
 document.addEventListener("DOMContentLoaded", () => {
+  // Site-wide language switcher: translates the current page at runtime.
+  // Because this is shared by the site's pages, future articles using script.js
+  // will receive the same language selector automatically.
+  const navigationForLanguage = document.querySelector("[data-navigation]");
+  if (navigationForLanguage && !navigationForLanguage.querySelector(".av-language-control")) {
+    const languageControl = document.createElement("div");
+    languageControl.className = "av-language-control";
+    languageControl.innerHTML = '<span class="av-language-label">Language</span><div class="gtranslate_wrapper"></div>';
+    navigationForLanguage.appendChild(languageControl);
+
+    window.gtranslateSettings = {
+      default_language: "en",
+      native_language_names: true,
+      detect_browser_language: false,
+      languages: [
+        "en","ur","ar","hi","pa","bn","zh-CN","zh-TW","es","fr","de","pt","ru","ja","ko",
+        "it","nl","tr","vi","id","ms","th","fa","he","uk","pl","ro","el","sv","no","da",
+        "fi","cs","sk","hu","bg","sr","hr","sl","lt","lv","et","is","ga","cy","eu","ca",
+        "gl","af","sq","am","hy","az","be","bs","my","km","lo","ka","kk","ky","uz","tg",
+        "mn","ne","si","ta","te","ml","kn","gu","mr","or","as","ps","sd","yi","sw","so",
+        "ha","ig","yo","zu","xh","st","sn","ny","rw","mg","mi","sm","to","fj","haw","ceb",
+        "jv","su","tl","eo","la","ht","lb","mk","mt","gd","ku","ckb","ug","tt","ba","cv"
+      ],
+      wrapper_selector: ".gtranslate_wrapper"
+    };
+
+    const translationScript = document.createElement("script");
+    translationScript.src = "https://cdn.gtranslate.net/widgets/latest/dropdown.js";
+    translationScript.defer = true;
+    translationScript.onerror = () => {
+      languageControl.setAttribute("data-translation-status", "unavailable");
+      const notice = document.createElement("span");
+      notice.className = "av-language-fallback";
+      notice.textContent = "Translation unavailable right now";
+      languageControl.appendChild(notice);
+    };
+    document.head.appendChild(translationScript);
+  }
+
   const menuButton = document.querySelector("[data-menu-button]");
   const navigation = document.querySelector("[data-navigation]");
 
