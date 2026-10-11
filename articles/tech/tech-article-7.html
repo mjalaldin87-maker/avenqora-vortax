@@ -645,9 +645,11 @@
 <h2>Collect only data that serves a clear purpose</h2>
 <p>Before adding an event, identify the product question it answers, who can access the resulting data and how long the data needs to be retained. Avoid placing passwords, authentication tokens or unnecessary personal information in analytics properties. Document event names and definitions so future teams can interpret historical reports correctly.</p>
 
-<h2>
-                Final thoughts
-              </h2>
+<h2>Design product analytics around decisions</h2>
+<p>Start with a product question—such as where new users abandon onboarding—before adding tracking events. Define each event with a stable name, a clear trigger, required properties and an owner. For example, “project_created” should mean the same thing across web and mobile, and should not fire merely because a user opened the creation dialog. Document the event dictionary, test instrumentation before release, and check for missing or duplicate events after deployment.</p>
+<p>Choose a small set of measures tied to a user outcome, such as activation within seven days, successful completion of a core task or repeat usage by cohort. Segment results where user journeys differ, but avoid collecting sensitive data that is not needed for the question. A rise in engagement does not automatically prove business value; compare it with task success, retention, support burden and qualitative feedback before deciding what to change.</p><h2>
+              Final thoughts
+            </h2>
 
               <p>
                 Product analytics can help SaaS teams replace some
