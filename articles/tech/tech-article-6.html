@@ -6,7 +6,7 @@
 
   <title>Building Scalable Data Pipelines for SaaS Application | AV</title>
 
-  <meta name="description" content="Understand building scalable data pipelines for saas applications, with practical guidance on key concepts, decisions, risks, and steps you can apply.">
+  <meta name="description" content="Design more reliable SaaS data pipelines with practical checks for freshness, retries, data quality, schema changes, monitoring and privacy.">
 
   <meta name="robots" content="index, follow">
   <meta name="author" content="Zia Carter — Writer &amp; Editor">
@@ -722,7 +722,14 @@
                 they become larger operational issues.
               </p>
 
-              <h2>
+              <h2>Worked example: make a daily reporting pipeline dependable</h2>
+<p>Imagine a SaaS team that sends a daily customer-usage report to its operations team. If the pipeline silently stops, the report may still appear in the dashboard but contain yesterday's data. A useful design therefore checks not only whether a job ran, but also whether the expected data arrived and passed validation.</p>
+<div class="category-card category-blue"><h3>Pipeline reliability checklist</h3><ul><li><strong>Freshness target:</strong> Define when data should be available and alert when it falls behind that target.</li><li><strong>Completeness:</strong> Check expected partitions, records or source batches before publishing a report.</li><li><strong>Quality:</strong> Validate required fields, allowed values, duplicate rates and unexpected volume changes.</li><li><strong>Retries:</strong> Use bounded retries for temporary failures and design repeated processing so it does not create duplicate results.</li><li><strong>Failure handling:</strong> Route records that cannot be processed to a monitored quarantine or dead-letter process with an owner.</li><li><strong>Schema changes:</strong> Coordinate source-field changes and test downstream consumers before deployment.</li><li><strong>Recovery:</strong> Document how to replay a failed batch and reconcile the output without publishing inconsistent results.</li></ul></div>
+<p>Set thresholds based on the actual business need. A daily financial report and a live fraud-monitoring stream require different freshness targets and failure responses. This is a design example, not a benchmark from a tested production system.</p>
+<h2>Track the data's lineage and access</h2>
+<p>When a report looks wrong, teams need to trace the output back to its source, transformation and processing time. Record enough lineage and operational metadata to investigate issues, while avoiding unnecessary copies of sensitive customer information. Restrict pipeline credentials to the specific sources and destinations the job requires.</p>
+
+<h2>
                 Final thoughts
               </h2>
 
@@ -874,7 +881,7 @@
 
       </section>
 
-    <section class="section"><div class="container"><div class="article-content"><h2>Sources</h2><p>[FILL IN — add real, topic-specific sources before publishing.]</p></div></div></section></article>
+    <section class="section"><div class="container"><div class="article-content"><h2>Sources and further reading</h2><ul><li><a href="https://cloud.google.com/architecture/data-mesh" target="_blank" rel="noopener noreferrer">Google Cloud Architecture Center: Data Mesh</a> — data ownership and domain-oriented data practices.</li><li><a href="https://www.nist.gov/privacy-framework" target="_blank" rel="noopener noreferrer">NIST Privacy Framework</a> — managing privacy risks in data handling.</li><li><a href="https://csrc.nist.gov/pubs/sp/800/53/r5/upd1/final" target="_blank" rel="noopener noreferrer">NIST SP 800-53 Rev. 5</a> — security and privacy controls for information systems and organizations.</li></ul><p>The reliability checklist is a practical editorial example. Teams should choose targets and controls for their own data and service requirements.</p></div></div></section></article>
 
   </main>
 
