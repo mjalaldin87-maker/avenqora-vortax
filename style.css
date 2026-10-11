@@ -1437,13 +1437,13 @@ main select:focus {
 }
 
 
-/* Site-wide language switcher */
+/* Site-wide language translation selector */
 .av-language-control {
   display: flex;
   align-items: center;
-  gap: 6px;
+  gap: 7px;
   flex: 0 0 auto;
-  padding-left: 7px;
+  padding-left: 9px;
   border-left: 1px solid var(--border);
 }
 
@@ -1452,42 +1452,26 @@ main select:focus {
   font-size: .72rem;
   font-weight: 700;
   letter-spacing: .02em;
+  white-space: nowrap;
 }
 
-.gtranslate_wrapper {
-  display: inline-flex;
-  align-items: center;
-  min-width: 104px;
-  max-width: 156px;
-}
-
-.gtranslate_wrapper select,
-.gtranslate_wrapper .gt_selector,
 .av-language-control select {
-  width: 100%;
+  width: 148px;
   max-width: 156px;
   min-height: 36px;
-  padding: 7px 26px 7px 9px;
+  padding: 7px 25px 7px 9px;
   border: 1px solid var(--border-strong);
   border-radius: 10px;
-  background: rgba(255,255,255,.06);
+  background: #15161a;
   color: var(--text-main);
   font: inherit;
   font-size: .78rem;
   cursor: pointer;
 }
 
-.gtranslate_wrapper select option,
 .av-language-control select option {
   background: #111216;
   color: #f5f7fb;
-}
-
-.av-language-fallback {
-  display: block;
-  max-width: 150px;
-  color: var(--text-muted);
-  font-size: .7rem;
 }
 
 @media (max-width: 1100px) {
@@ -1515,11 +1499,8 @@ main select:focus {
     min-width: 58px;
   }
 
-  .gtranslate_wrapper,
-  .gtranslate_wrapper select,
-  .gtranslate_wrapper .gt_selector,
   .av-language-control select {
-    width: auto;
+    width: min(260px, 100%);
     max-width: 100%;
     min-width: 170px;
   }
