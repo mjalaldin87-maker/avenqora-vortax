@@ -6,7 +6,7 @@
 
   <title>How Vulnerability Management Helps Reduce Cybersecuri | AV</title>
 
-  <meta name="description" content="Understand how vulnerability management helps reduce cybersecurity risk, with practical guidance on key concepts, decisions, risks, and steps you can apply.">
+  <meta name="description" content="Prioritize vulnerability remediation using asset importance, exposure, exploitation evidence, business impact, ownership and verification.">
 
   <meta name="robots" content="index, follow">
   <meta name="author" content="Zia Carter — Writer &amp; Editor">
@@ -722,7 +722,14 @@
                 known systems.
               </p>
 
-              <h2>
+              <h2>Worked example: prioritize a vulnerability queue</h2>
+<p>Imagine a small IT team receives three findings at once: a known-exploited weakness on an internet-facing server, an outdated package on an internal test machine and a medium-severity issue on a system that processes sensitive customer information. The team should not rank them by severity score alone. Exposure, evidence of exploitation, asset importance and available mitigations all affect the decision.</p>
+<div class="category-card category-blue"><h3>Risk-based triage questions</h3><ul><li><strong>Is the asset real and in scope?</strong> Confirm the finding, software version, system owner and whether the affected component is actually present.</li><li><strong>Is exploitation known?</strong> Check trusted advisories and available evidence rather than assuming every published issue is being exploited.</li><li><strong>How exposed is it?</strong> Consider internet reachability, privileges required and whether sensitive systems or data are involved.</li><li><strong>What action reduces risk fastest?</strong> Patch when safe and available; otherwise evaluate temporary controls such as restricting access or disabling an affected feature.</li><li><strong>Who owns the deadline?</strong> Assign a responsible person and a risk-based remediation target, with a documented exception if the fix must be delayed.</li><li><strong>How will it be verified?</strong> Re-scan or otherwise confirm the fix, check that the vulnerable component is no longer exposed and close the finding only with supporting evidence.</li></ul></div>
+<p>This is a hypothetical queue, not a real vulnerability assessment. Organizations should follow applicable regulatory, contractual and internal requirements when setting remediation deadlines.</p>
+<h2>Use trusted advisories and document exceptions</h2>
+<p>Use vendor advisories and recognized vulnerability resources to validate affected versions and available fixes. If a patch cannot be applied immediately, record the reason, accountable owner, temporary mitigation, review date and planned resolution. An accepted exception should remain visible and should not silently become permanent.</p>
+
+<h2>
                 Final thoughts
               </h2>
 
@@ -873,7 +880,7 @@
 
       </section>
 
-    <section class="section"><div class="container"><div class="article-content"><h2>Sources</h2><p>[FILL IN — add real, topic-specific sources before publishing.]</p></div></div></section></article>
+    <section class="section"><div class="container"><div class="article-content"><h2>Sources and further reading</h2><ul><li><a href="https://www.cisa.gov/known-exploited-vulnerabilities-catalog" target="_blank" rel="noopener noreferrer">CISA Known Exploited Vulnerabilities Catalog</a> — vulnerabilities with evidence of exploitation.</li><li><a href="https://nvd.nist.gov/" target="_blank" rel="noopener noreferrer">NIST National Vulnerability Database</a> — vulnerability records and supporting information.</li><li><a href="https://www.cisa.gov/resources-tools/resources/vulnerability-scanning" target="_blank" rel="noopener noreferrer">CISA Vulnerability Scanning resources</a> — guidance and resources for vulnerability discovery.</li></ul><p>Prioritization should use current advisories and the organization's own exposure and business context; no single score captures every risk.</p></div></div></section></article>
 
   </main>
 
