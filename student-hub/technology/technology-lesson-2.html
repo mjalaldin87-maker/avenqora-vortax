@@ -6,7 +6,7 @@
 
   <title>Object-Oriented Programming Basics | AV</title>
 
-  <meta name="description" content="Learn object-oriented programming basics, with clear explanations, practical examples, useful study guidance, and steps you can apply as a student.">
+  <meta name="description" content="Learn object-oriented programming through a small library-system design, Python class example, testing exercise and official documentation.">
 
   <meta name="robots" content="index, follow">
   <meta name="author" content="Zia Carter — Writer &amp; Editor">
@@ -372,6 +372,40 @@
               and Library, then decide which attributes and methods
               belong to each one.
             </p>
+
+            <h2>Worked example: model a library book</h2>
+            <p>A class describes a kind of object; an object is one specific instance. In this example, the class stores a book's title and whether it is available. The code is illustrative Python and can be adapted in a beginner programming environment.</p>
+            <pre><code>class Book:
+    def __init__(self, title):
+        self.title = title
+        self.is_available = True
+
+    def borrow(self):
+        if self.is_available:
+            self.is_available = False
+            return "Borrowing recorded"
+        return "Book is already borrowed"
+
+book_a = Book("Computer Networks")
+book_b = Book("Introduction to Python")
+print(book_a.borrow())
+print(book_a.borrow())
+print(book_b.is_available)</code></pre>
+            <p><strong>What to notice:</strong> <code>Book</code> is the class; <code>book_a</code> and <code>book_b</code> are separate objects. Each object has its own state. The <code>borrow()</code> method changes one object's availability and handles the already-borrowed case.</p>
+            <h2>Design exercise: choose responsibilities</h2>
+            <ol>
+              <li>List the attributes a <code>Member</code> might need, avoiding unnecessary personal data.</li>
+              <li>Suggest a method for a member to request a book.</li>
+              <li>Decide which class should check whether a book is available.</li>
+              <li>Test what happens when two members request the same book. Explain why a real system also needs persistent storage and rules for concurrent requests.</li>
+            </ol>
+            <p><strong>Design tip:</strong> do not create a class for every noun automatically. Use a class when it groups related state and behaviour clearly; keep responsibilities focused and test the boundaries.</p>
+            <h2>Further reading</h2>
+            <ul>
+              <li><a href="https://docs.python.org/3/tutorial/classes.html" target="_blank" rel="noopener noreferrer">Python documentation: Classes</a></li>
+              <li><a href="https://developer.mozilla.org/en-US/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/routes" target="_blank" rel="noopener noreferrer">MDN: Routes and controllers in a web application</a></li>
+              <li><a href="https://docs.python.org/3/library/unittest.html" target="_blank" rel="noopener noreferrer">Python documentation: Unit testing</a></li>
+            </ul>
 
             <h2>
               Quick review
