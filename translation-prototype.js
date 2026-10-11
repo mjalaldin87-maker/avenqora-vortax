@@ -113,37 +113,50 @@
     try { sessionStorage.setItem(cacheKey(language, text), translated); } catch {}
   }
 
-  async function translateTexts(texts, target) {
-    const output = [];
-    for (let i = 0; i < texts.length; i += 12) {
-      const chunk = texts.slice(i, i + 12);
+  function escapeHtml(value) {
+      return value.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;").replace(/'/g, "&#39;");
+    }
+  
+    async function translateTexts(texts, target) {
+      const output = new Array(texts.length);
       const missing = [];
       const missingIndexes = [];
-      const translated = new Array(chunk.length);
-      chunk.forEach((text, index) => {
+      texts.forEach((text, index) => {
         const cached = getCache(target, text);
-        if (cached !== null) translated[index] = cached;
+        if (cached !== null) output[index] = cached;
         else { missing.push(text); missingIndexes.push(index); }
       });
-      if (missing.length) {
-        const response = await request("/translate", { q: missing, source: "en", target, format: "text" });
-        let values;
-        if (Array.isArray(response)) values = response.map(item => typeof item === "string" ? item : item.translatedText);
-        else if (Array.isArray(response.translatedText)) values = response.translatedText;
-        else if (typeof response.translatedText === "string" && missing.length === 1) values = [response.translatedText];
-        else throw new Error("Translation server returned an unexpected response");
-        if (values.length !== missing.length || values.some(value => typeof value !== "string")) {
-          throw new Error("Translation response did not match the requested text batch");
+  
+      // LibreTranslate's documented API accepts one q string. Wrap a small batch
+      // in HTML so markup identifies each fragment; do not assume q accepts arrays.
+      for (let start = 0; start < missing.length; start += 8) {
+        const textBatch = missing.slice(start, start + 8);
+        const indexBatch = missingIndexes.slice(start, start + 8);
+        const markup = "<div>" + textBatch.map((value, i) =>
+          '<p><span id="avx-fragment-' + i + '">' + escapeHtml(value) + "</span></p>"
+        ).join("") + "</div>";
+        const response = await request("/translate", {
+          q: markup, source: "en", target, format: "html"
+        });
+        if (typeof response.translatedText !== "string") {
+          throw new Error("Translation server returned an unexpected response");
+        }
+        const parsed = new DOMParser().parseFromString(response.translatedText, "text/html");
+        const values = textBatch.map((_, i) => {
+          const span = parsed.getElementById("avx-fragment-" + i);
+          return span ? span.textContent : null;
+        });
+        if (values.some(value => typeof value !== "string")) {
+          throw new Error("Translation server did not preserve batch markup");
         }
         values.forEach((value, j) => {
-          translated[missingIndexes[j]] = value;
-          setCache(target, missing[j], value);
+          const original = textBatch[j];
+          output[indexBatch[j]] = value;
+          setCache(target, original, value);
         });
       }
-      output.push(...translated);
+      return output;
     }
-    return output;
-  }
 
   async function applyTranslation() {
     if (busy) return;
