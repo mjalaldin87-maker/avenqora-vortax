@@ -6,7 +6,7 @@
 
   <title>Practical Network Security for Growing Digital Busine | AV</title>
 
-  <meta name="description" content="Understand practical network security for growing digital businesses, with practical guidance on key concepts, decisions, risks, and steps you can apply.">
+  <meta name="description" content="Learn practical network security controls, including asset inventory, least-privilege access, segmentation, firewall review and monitoring.">
 
   <meta name="robots" content="index, follow">
   <meta name="author" content="Zia Carter — Writer &amp; Editor">
@@ -750,7 +750,12 @@
                 basic monitoring and update processes.
               </p>
 
-              <h2>
+              <h2>Practical network segmentation review</h2>
+<p>Segmentation is useful when it limits which systems can communicate with one another. Simply creating network zones does not provide much protection if every zone can still reach every other zone. Begin with business requirements, then test whether the implemented rules match them.</p>
+<div class="category-card category-blue"><h3>Segmentation checklist</h3><ul><li><strong>Map critical systems:</strong> Identify user devices, servers, guest networks, production systems and administrative interfaces.</li><li><strong>Define required traffic:</strong> Document which systems need to communicate and for what business purpose.</li><li><strong>Restrict by default:</strong> Where appropriate, block unnecessary paths and allow only approved communication.</li><li><strong>Protect administration:</strong> Keep management interfaces restricted to authorized users and trusted access paths.</li><li><strong>Test carefully:</strong> Validate that approved services still work and that unnecessary connections are blocked.</li><li><strong>Review exceptions:</strong> Give each exception an owner and a review date so temporary rules do not become permanent.</li><li><strong>Monitor changes:</strong> Log important rule changes and investigate unexpected traffic or access patterns.</li></ul></div>
+<p>Network designs vary. Changes should be planned and tested by authorized administrators, with rollback steps ready to avoid interrupting business operations.</p>
+
+<h2>
                 Final thoughts
               </h2>
 
@@ -900,7 +905,7 @@
 
       </section>
 
-    <section class="section"><div class="container"><div class="article-content"><h2>Sources</h2><p>[FILL IN — add real, topic-specific sources before publishing.]</p></div></div></section></article>
+    <section class="section"><div class="container"><div class="article-content"><h2>Sources and further reading</h2><ul><li><a href="https://csrc.nist.gov/pubs/sp/800/41/r1/final" target="_blank" rel="noopener noreferrer">NIST SP 800-41 Rev. 1: Guidelines on Firewalls and Firewall Policy</a> — firewall policy and traffic-control considerations.</li><li><a href="https://www.cisa.gov/resources-tools/resources/secure-cloud-business-applications" target="_blank" rel="noopener noreferrer">CISA: Secure Cloud Business Applications</a> — security practices for business systems and cloud environments.</li><li><a href="https://www.nist.gov/cyberframework" target="_blank" rel="noopener noreferrer">NIST Cybersecurity Framework 2.0</a> — organizing security outcomes and risk management.</li></ul><p>The checklist is a general planning aid; network changes should be adapted to the actual environment and performed by authorized staff.</p></div></div></section></article>
 
   </main>
 
