@@ -1,41 +1,79 @@
 document.addEventListener("DOMContentLoaded", () => {
-  // Site-wide language switcher: translates the current page at runtime.
-  // Because this is shared by the site's pages, future articles using script.js
-  // will receive the same language selector automatically.
+  // Site-wide translation helper. It opens Google's website-translation view
+  // for the current URL, so it also works for future pages using this shared script.
+  // This avoids embedding a third-party free widget whose terms may restrict commercial use.
   const navigationForLanguage = document.querySelector("[data-navigation]");
   if (navigationForLanguage && !navigationForLanguage.querySelector(".av-language-control")) {
+    const translationLanguages = [
+      ["en", "English"], ["ar", "Arabic"], ["bg", "Bulgarian"],
+      ["zh-CN", "Chinese (Simplified)"], ["zh-TW", "Chinese (Traditional)"],
+      ["hr", "Croatian"], ["cs", "Czech"], ["da", "Danish"], ["nl", "Dutch"],
+      ["fi", "Finnish"], ["fr", "French"], ["de", "German"], ["el", "Greek"],
+      ["hi", "Hindi"], ["it", "Italian"], ["ja", "Japanese"], ["ko", "Korean"],
+      ["no", "Norwegian"], ["pl", "Polish"], ["pt", "Portuguese"], ["ro", "Romanian"],
+      ["ru", "Russian"], ["es", "Spanish"], ["sv", "Swedish"], ["ca", "Catalan"],
+      ["tl", "Filipino"], ["iw", "Hebrew"], ["id", "Indonesian"], ["lv", "Latvian"],
+      ["lt", "Lithuanian"], ["sr", "Serbian"], ["sk", "Slovak"], ["sl", "Slovenian"],
+      ["uk", "Ukrainian"], ["vi", "Vietnamese"], ["sq", "Albanian"], ["et", "Estonian"],
+      ["gl", "Galician"], ["hu", "Hungarian"], ["mt", "Maltese"], ["th", "Thai"],
+      ["tr", "Turkish"], ["fa", "Persian"], ["af", "Afrikaans"], ["ms", "Malay"],
+      ["sw", "Swahili"], ["ga", "Irish"], ["cy", "Welsh"], ["be", "Belarusian"],
+      ["is", "Icelandic"], ["mk", "Macedonian"], ["yi", "Yiddish"], ["hy", "Armenian"],
+      ["az", "Azerbaijani"], ["eu", "Basque"], ["ka", "Georgian"], ["ht", "Haitian Creole"],
+      ["ur", "Urdu"], ["bn", "Bengali"], ["bs", "Bosnian"], ["ceb", "Cebuano"],
+      ["eo", "Esperanto"], ["gu", "Gujarati"], ["ha", "Hausa"], ["hmn", "Hmong"],
+      ["ig", "Igbo"], ["jw", "Javanese"], ["kn", "Kannada"], ["km", "Khmer"],
+      ["lo", "Lao"], ["la", "Latin"], ["mi", "Maori"], ["mr", "Marathi"],
+      ["mn", "Mongolian"], ["ne", "Nepali"], ["pa", "Punjabi"], ["so", "Somali"],
+      ["ta", "Tamil"], ["te", "Telugu"], ["yo", "Yoruba"], ["zu", "Zulu"],
+      ["my", "Myanmar (Burmese)"], ["ny", "Chichewa"], ["kk", "Kazakh"],
+      ["mg", "Malagasy"], ["ml", "Malayalam"], ["si", "Sinhala"], ["st", "Sesotho"],
+      ["su", "Sundanese"], ["tg", "Tajik"], ["uz", "Uzbek"], ["am", "Amharic"],
+      ["co", "Corsican"], ["haw", "Hawaiian"], ["ku", "Kurdish (Kurmanji)"],
+      ["ky", "Kyrgyz"], ["lb", "Luxembourgish"], ["ps", "Pashto"], ["sm", "Samoan"],
+      ["gd", "Scottish Gaelic"], ["sn", "Shona"], ["sd", "Sindhi"],
+      ["fy", "Frisian"], ["xh", "Xhosa"]
+    ];
+
     const languageControl = document.createElement("div");
     languageControl.className = "av-language-control";
-    languageControl.innerHTML = '<span class="av-language-label">Language</span><div class="gtranslate_wrapper"></div>';
+    const label = document.createElement("label");
+    label.className = "av-language-label";
+    label.htmlFor = "av-language-select";
+    label.textContent = "Translate";
+    const select = document.createElement("select");
+    select.id = "av-language-select";
+    select.setAttribute("aria-label", "Translate this page into");
+    const prompt = document.createElement("option");
+    prompt.value = "";
+    prompt.textContent = "Choose language";
+    select.appendChild(prompt);
+
+    translationLanguages.forEach(([code, name]) => {
+      const option = document.createElement("option");
+      option.value = code;
+      option.textContent = name;
+      select.appendChild(option);
+    });
+
+    select.addEventListener("change", () => {
+      const language = select.value;
+      if (!language || language === "en") {
+        select.value = "";
+        return;
+      }
+      const translatedUrl = new URL("https://translate.google.com/translate");
+      translatedUrl.searchParams.set("sl", "en");
+      translatedUrl.searchParams.set("tl", language);
+      translatedUrl.searchParams.set("u", window.location.href);
+      const destination = translatedUrl.toString();
+      const opened = window.open(destination, "_blank", "noopener,noreferrer");
+      if (!opened) window.location.assign(destination);
+      select.value = "";
+    });
+
+    languageControl.append(label, select);
     navigationForLanguage.appendChild(languageControl);
-
-    window.gtranslateSettings = {
-      default_language: "en",
-      native_language_names: true,
-      detect_browser_language: false,
-      languages: [
-        "en","ar","bg","zh-CN","zh-TW","hr","cs","da","nl","fi","fr","de","el","hi","it",
-        "ja","ko","no","pl","pt","ro","ru","es","sv","ca","tl","iw","id","lv","lt","sr",
-        "sk","sl","uk","vi","sq","et","gl","hu","mt","th","tr","fa","af","ms","sw","ga",
-        "cy","be","is","mk","yi","hy","az","eu","ka","ht","ur","bn","bs","ceb","eo","gu",
-        "ha","hmn","ig","jw","kn","km","lo","la","mi","mr","mn","ne","pa","so","ta","te",
-        "yo","zu","my","ny","kk","mg","ml","si","st","su","tg","uz","am","co","haw","ku",
-        "ky","lb","ps","sm","gd","sn","sd","fy","xh"
-      ],
-      wrapper_selector: ".gtranslate_wrapper"
-    };
-
-    const translationScript = document.createElement("script");
-    translationScript.src = "https://cdn.gtranslate.net/widgets/latest/dropdown.js";
-    translationScript.defer = true;
-    translationScript.onerror = () => {
-      languageControl.setAttribute("data-translation-status", "unavailable");
-      const notice = document.createElement("span");
-      notice.className = "av-language-fallback";
-      notice.textContent = "Translation unavailable right now";
-      languageControl.appendChild(notice);
-    };
-    document.head.appendChild(translationScript);
   }
 
   const menuButton = document.querySelector("[data-menu-button]");
