@@ -6,7 +6,7 @@
 
   <title>Why Product Analytics Matters for SaaS Growth | AV</title>
 
-  <meta name="description" content="Understand why product analytics matters for saas growth, with practical guidance on key concepts, decisions, risks, and steps you can apply.">
+  <meta name="description" content="Measure SaaS product analytics with a defined activation event, cohort-based retention, data-quality checks and privacy-conscious instrumentation.">
 
   <meta name="robots" content="index, follow">
   <meta name="author" content="Zia Carter — Writer &amp; Editor">
@@ -638,7 +638,14 @@
                 support a decision that matters to the product or business.
               </p>
 
-              <h2>
+              <h2>Worked example: define activation before measuring it</h2>
+<p>Imagine a project-management product where creating an account is easy, but the intended value comes when a team creates a project and completes its first task together. Counting registrations alone would miss whether users reached that value. The product team could define an activation event around that first meaningful workflow, then measure what share of eligible new accounts complete it within a clearly stated period.</p>
+<div class="category-card category-blue"><h3>Measurement plan</h3><ul><li><strong>Write the definition:</strong> Specify the exact event or sequence that counts as activation, including exclusions.</li><li><strong>Set the window:</strong> For example, decide whether activation is measured within seven days of account creation; choose a period appropriate to the product.</li><li><strong>Validate instrumentation:</strong> Check that the event fires once at the right moment and that test accounts are handled consistently.</li><li><strong>Compare cohorts:</strong> Group users by signup period or relevant acquisition channel, while avoiding unsupported conclusions from small samples.</li><li><strong>Investigate friction:</strong> Review where users stop and combine event data with support feedback or usability research.</li><li><strong>Test one change:</strong> Record the hypothesis and measure the same defined outcome after the change.</li></ul></div>
+<p>This is an illustrative measurement plan, not evidence about a real SaaS product. An observed improvement may have several explanations; use an appropriate experiment or comparison where practical before attributing the change to one feature.</p>
+<h2>Collect only data that serves a clear purpose</h2>
+<p>Before adding an event, identify the product question it answers, who can access the resulting data and how long the data needs to be retained. Avoid placing passwords, authentication tokens or unnecessary personal information in analytics properties. Document event names and definitions so future teams can interpret historical reports correctly.</p>
+
+<h2>
                 Final thoughts
               </h2>
 
@@ -789,7 +796,7 @@
 
       </section>
 
-    <section class="section"><div class="container"><div class="article-content"><h2>Sources</h2><p>[FILL IN — add real, topic-specific sources before publishing.]</p></div></div></section></article>
+    <section class="section"><div class="container"><div class="article-content"><h2>Sources and further reading</h2><ul><li><a href="https://www.nist.gov/privacy-framework" target="_blank" rel="noopener noreferrer">NIST Privacy Framework</a> — a risk-based approach to managing privacy.</li><li><a href="https://www.nist.gov/cyberframework" target="_blank" rel="noopener noreferrer">NIST Cybersecurity Framework</a> — guidance for understanding and managing cybersecurity risk around information systems.</li><li><a href="https://www.gov.uk/service-manual/measuring-success" target="_blank" rel="noopener noreferrer">UK Government Service Manual: Measuring success</a> — practical guidance on choosing and interpreting service measures.</li></ul><p>The product scenario is illustrative. The appropriate event definitions and measurement window depend on the product and its users.</p></div></div></section></article>
 
   </main>
 
