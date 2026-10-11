@@ -755,9 +755,12 @@
 <div class="category-card category-blue"><h3>Segmentation checklist</h3><ul><li><strong>Map critical systems:</strong> Identify user devices, servers, guest networks, production systems and administrative interfaces.</li><li><strong>Define required traffic:</strong> Document which systems need to communicate and for what business purpose.</li><li><strong>Restrict by default:</strong> Where appropriate, block unnecessary paths and allow only approved communication.</li><li><strong>Protect administration:</strong> Keep management interfaces restricted to authorized users and trusted access paths.</li><li><strong>Test carefully:</strong> Validate that approved services still work and that unnecessary connections are blocked.</li><li><strong>Review exceptions:</strong> Give each exception an owner and a review date so temporary rules do not become permanent.</li><li><strong>Monitor changes:</strong> Log important rule changes and investigate unexpected traffic or access patterns.</li></ul></div>
 <p>Network designs vary. Changes should be planned and tested by authorized administrators, with rollback steps ready to avoid interrupting business operations.</p>
 
+<h2>A safe starting point for network segmentation</h2>
+<p>Begin with an inventory of important systems, their owners, the data they handle and the connections they genuinely require. Group systems by purpose and risk—for example, employee devices, public-facing services, application servers, databases and administrative access—then document the allowed flows between those groups. Avoid assuming that systems are safe simply because they share an internal network. Use least-privilege rules, restrict management interfaces, and require stronger authentication for privileged access.</p>
+<p>Implement changes in stages. First observe existing traffic and identify legitimate dependencies; then test a narrow rule set in a non-production environment or low-risk segment. Monitor denied connections and application health after rollout, keep a documented rollback plan, and review exceptions with an owner and expiry date. Segmentation is an ongoing control: stale rules and undocumented exceptions can quietly recreate broad access.</p>
 <h2>
-                Final thoughts
-              </h2>
+              Final thoughts
+            </h2>
 
               <p>
                 Network security is most effective when it is treated
