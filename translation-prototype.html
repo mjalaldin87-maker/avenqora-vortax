@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Translation Prototype | Avenqora Vortax</title>
+<style>
+:root{color-scheme:dark;--bg:#0d1018;--panel:#151b27;--line:#2b3548;--text:#edf2fa;--muted:#aab6c8;--accent:#78d8ff}
+*{box-sizing:border-box}body{margin:0;background:radial-gradient(circle at top right,#1d2a42 0,transparent 42%),var(--bg);color:var(--text);font:16px/1.7 system-ui,-apple-system,Segoe UI,sans-serif}main{max-width:920px;margin:0 auto;padding:32px 20px 72px}.eyebrow{text-transform:uppercase;letter-spacing:.16em;font-size:.76rem;color:var(--accent);font-weight:700}h1{font-size:clamp(2rem,5vw,3.2rem);line-height:1.1;margin:.5rem 0 1rem}h2{margin-top:2.2rem;line-height:1.25}.muted{color:var(--muted)}.panel,article{border:1px solid var(--line);border-radius:18px;background:rgba(21,27,39,.92);padding:22px;margin:22px 0}.controls{display:flex;flex-wrap:wrap;gap:10px;align-items:center}.controls select,.controls button{min-height:44px;border-radius:10px;border:1px solid var(--line);padding:9px 12px;background:#0e1420;color:var(--text);font:inherit}.controls button{cursor:pointer;background:#17364b;border-color:#285b79}.controls button:disabled{opacity:.5;cursor:wait}#avx-translation-status{margin:14px 0 0;color:var(--muted);font-size:.94rem}#avx-translation-status[data-state=error]{color:#ffb5b5}.note{border-left:3px solid var(--accent);padding-left:14px;color:var(--muted)}a{color:var(--accent)}footer{border-top:1px solid var(--line);padding-top:18px;margin-top:34px;color:var(--muted);font-size:.9rem}
+</style>
+</head>
+<body>
+<main>
+  <div class="eyebrow">Avenqora Vortax · Test only</div>
+  <h1>Website language translation prototype</h1>
+  <p class="muted">This isolated demo checks whether an API-key-free translation service can translate page text. It does not modify the live website or production pages.</p>
+  <section class="panel" aria-label="Translation controls">
+    <div class="controls">
+      <label for="avx-language">Choose language</label>
+      <select id="avx-language"><option value="en">English (original)</option><option value="ur">Urdu</option><option value="ar">Arabic</option><option value="es">Spanish</option><option value="fr">French</option></select>
+      <button id="avx-translate-button" type="button">Translate page</button>
+      <button id="avx-reset-button" type="button">Restore English</button>
+    </div>
+    <p id="avx-translation-status" role="status" aria-live="polite">Loading available languages…</p>
+  </section>
+  <article>
+    <h2>Why translation matters</h2>
+    <p>A global technology publication should help readers understand useful information in the language they are most comfortable using. The language selector should work on current articles and content added in the future, not only on a fixed list of existing pages.</p>
+    <h2>Technology and cybersecurity</h2>
+    <p>Strong cybersecurity depends on practical habits: use multi-factor authentication, install security updates, verify unexpected requests, and report suspicious activity promptly. A translation can make these steps easier to understand, but important security instructions should still be reviewed by a fluent speaker.</p>
+    <h2>Business learning</h2>
+    <p>Before automating a business process, document the current workflow, measure a baseline, identify the problem, and test one controlled change. Compare results using the same definitions and time period, and keep a rollback plan in case the change causes unexpected problems.</p>
+    <p class="note" data-no-translate="false">Prototype note: free public translation servers may be slow, unavailable, rate-limited, or inaccurate. Do not use this prototype as proof that every language is supported or that translations are publication-ready.</p>
+  </article>
+  <footer>Test page only · No translation code is included in the live production pages by this prototype.</footer>
+</main>
+<script src="translation-prototype.js"></script>
+</body>
+</html>
