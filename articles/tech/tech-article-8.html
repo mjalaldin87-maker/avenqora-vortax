@@ -6,7 +6,7 @@
 
   <title>How Zero Downtime Deployment Changes Modern SaaS Oper | AV</title>
 
-  <meta name="description" content="Understand how zero downtime deployment changes modern saas operations, with practical guidance on key concepts, decisions, risks, and steps you can apply.">
+  <meta name="description" content="Plan safer SaaS deployments with backward-compatible database changes, health checks, staged traffic, rollback criteria and post-release monitoring.">
 
   <meta name="robots" content="index, follow">
   <meta name="author" content="Zia Carter — Writer &amp; Editor">
@@ -661,7 +661,14 @@
                 behavior and limitations.
               </p>
 
-              <h2>
+              <h2>Release readiness checklist for a safer deployment</h2>
+<p>A deployment can keep application instances running and still cause an outage if the new version cannot read existing data, depends on an unavailable service or introduces errors for a subset of users. Teams should define how they will detect those failures and decide what to do before shifting production traffic.</p>
+<div class="category-card category-blue"><h3>Before and during release</h3><ul><li><strong>Compatibility:</strong> Confirm old and new application versions can safely coexist during the rollout.</li><li><strong>Database changes:</strong> Prefer staged, backward-compatible migrations where possible; avoid assuming code rollback will reverse data changes.</li><li><strong>Health checks:</strong> Verify the application can serve real requests and reach its required dependencies, not merely that a process is running.</li><li><strong>Small exposure:</strong> Use a rolling or canary approach when supported, and increase traffic only after defined checks pass.</li><li><strong>Stop conditions:</strong> Set thresholds for error rate, latency, failed health checks and key business workflows before release begins.</li><li><strong>Recovery:</strong> Identify who can stop the rollout, how traffic can be shifted back and which database changes require a forward fix.</li><li><strong>After release:</strong> Monitor critical workflows and customer-facing errors for an agreed period, then document any incidents or unexpected behavior.</li></ul></div>
+<p>This checklist is a general planning aid. A rollback is not always safe when a release changes data formats or external side effects, so test recovery procedures in an environment that resembles production.</p>
+<h2>Availability is a measured service objective</h2>
+<p>Define what users need to be able to do, and measure that outcome alongside infrastructure health. A server returning a successful status code does not prove that customers can complete a payment, submit a form or load their data. Service-level objectives can help teams choose meaningful thresholds and make release decisions consistently.</p>
+
+<h2>
                 Final thoughts
               </h2>
 
@@ -811,7 +818,7 @@
 
       </section>
 
-    <section class="section"><div class="container"><div class="article-content"><h2>Sources</h2><p>[FILL IN — add real, topic-specific sources before publishing.]</p></div></div></section></article>
+    <section class="section"><div class="container"><div class="article-content"><h2>Sources and further reading</h2><ul><li><a href="https://sre.google/sre-book/release-engineering/" target="_blank" rel="noopener noreferrer">Google SRE Book: Release Engineering</a> — principles for repeatable, reliable releases.</li><li><a href="https://sre.google/workbook/canarying-releases/" target="_blank" rel="noopener noreferrer">Google SRE Workbook: Canarying Releases</a> — gradual release and evaluation practices.</li><li><a href="https://sre.google/sre-book/service-level-objectives/" target="_blank" rel="noopener noreferrer">Google SRE Book: Service Level Objectives</a> — connecting reliability to user-facing service goals.</li></ul><p>Release strategies and recovery options depend on the application architecture and data changes.</p></div></div></section></article>
 
   </main>
 
