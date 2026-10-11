@@ -6,7 +6,7 @@
 
   <title>Designing Better APIs for Modern SaaS Products | AV</title>
 
-  <meta name="description" content="Understand designing better apis for modern saas products, with practical guidance on key concepts, decisions, risks, and steps you can apply.">
+  <meta name="description" content="Improve SaaS API design with a practical contract checklist covering errors, pagination, authentication, versioning and reliable integration tests.">
 
   <meta name="robots" content="index, follow">
   <meta name="author" content="Zia Carter — Writer &amp; Editor">
@@ -693,7 +693,14 @@
                 internal information.
               </p>
 
-              <h2>
+              <h2>Worked example: define an API contract before coding</h2>
+<p>Suppose a project-management SaaS product exposes an endpoint that returns a project's tasks. Before implementation, the API team and client developers should agree on what a successful response contains, how missing or unauthorized projects are handled, how results are paginated and what clients should do when a request is limited or temporarily unavailable.</p>
+<div class="category-card category-blue"><h3>API contract review</h3><ul><li><strong>Request:</strong> Document the method, path, parameters, required fields and authentication.</li><li><strong>Success:</strong> Define the response shape, field types, optional values and pagination behavior.</li><li><strong>Errors:</strong> Specify consistent status codes and a machine-readable error format without leaking secrets or internal stack traces.</li><li><strong>Access:</strong> Test that one customer cannot retrieve another customer's records by changing an identifier.</li><li><strong>Limits:</strong> Document rate limits and how clients should retry safely, including any retry-after guidance.</li><li><strong>Compatibility:</strong> Identify which changes are backward compatible and how clients will be notified of breaking changes.</li><li><strong>Testing:</strong> Run automated tests against documented examples and realistic failure cases before release.</li></ul></div>
+<p>This is an illustrative API design exercise, not a test of a real API. Security-sensitive endpoints should receive appropriate authorization and abuse-case testing as part of the development process.</p>
+<h2>Document the contract in a machine-readable format</h2>
+<p>For HTTP APIs, the OpenAPI Specification provides a language-independent format for describing endpoints, parameters, request bodies, responses and security requirements. A consistent specification can support documentation, client generation and contract checks. It does not replace code review, security testing or clear product decisions.</p>
+
+<h2>
                 Final thoughts
               </h2>
 
@@ -843,7 +850,7 @@
 
       </section>
 
-    <section class="section"><div class="container"><div class="article-content"><h2>Sources</h2><p>[FILL IN — add real, topic-specific sources before publishing.]</p></div></div></section></article>
+    <section class="section"><div class="container"><div class="article-content"><h2>Sources and further reading</h2><ul><li><a href="https://spec.openapis.org/oas/latest.html" target="_blank" rel="noopener noreferrer">OpenAPI Specification</a> — a standard format for describing HTTP APIs.</li><li><a href="https://owasp.org/www-project-api-security/" target="_blank" rel="noopener noreferrer">OWASP API Security Project</a> — common API security risks and mitigation guidance.</li><li><a href="https://www.rfc-editor.org/rfc/rfc9110" target="_blank" rel="noopener noreferrer">RFC 9110: HTTP Semantics</a> — standardized HTTP request and response semantics.</li></ul><p>The endpoint scenario is illustrative and does not represent a product benchmark.</p></div></div></section></article>
 
   </main>
 
