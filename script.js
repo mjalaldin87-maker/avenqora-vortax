@@ -67,8 +67,7 @@ document.addEventListener("DOMContentLoaded", () => {
       translatedUrl.searchParams.set("tl", language);
       translatedUrl.searchParams.set("u", window.location.href);
       const destination = translatedUrl.toString();
-      const opened = window.open(destination, "_blank", "noopener,noreferrer");
-      if (!opened) window.location.assign(destination);
+      window.open(destination, "_blank", "noopener,noreferrer");
       select.value = "";
     });
 
