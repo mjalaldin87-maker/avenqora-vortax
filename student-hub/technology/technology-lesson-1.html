@@ -6,7 +6,7 @@
 
   <title>Introduction to Computer Networks | AV</title>
 
-  <meta name="description" content="Learn introduction to computer networks, with clear explanations, practical examples, useful study guidance, and steps you can apply as a student.">
+  <meta name="description" content="Study computer networking through a practical website-request walkthrough, device roles, IP addressing, protocols and a short knowledge check.">
 
   <meta name="robots" content="index, follow">
   <meta name="author" content="Zia Carter — Writer &amp; Editor">
@@ -316,6 +316,29 @@
               <li>LAN</li>
               <li>WAN</li>
               <li>Internet</li>
+            </ul>
+
+            <h2>Applied practice: trace a website request</h2>
+            <p>Imagine you open your college portal on a laptop connected to home Wi-Fi. Use this sequence to explain the journey; real networks may use additional services and devices.</p>
+            <ol>
+              <li><strong>Local connection:</strong> the laptop connects to the wireless access point, often built into a home router.</li>
+              <li><strong>Name lookup:</strong> DNS helps translate the portal's domain name into an IP address.</li>
+              <li><strong>Routing:</strong> routers forward packets between networks toward the destination.</li>
+              <li><strong>Web connection:</strong> the browser communicates with the server using web protocols, usually HTTPS for a protected connection.</li>
+              <li><strong>Response:</strong> the server sends data back and the browser renders the page.</li>
+            </ol>
+            <div class="category-card category-blue">
+              <h3>Mini lab — observe, do not interfere</h3>
+              <p>On your own device, identify whether you are using Wi-Fi or Ethernet and find your device's local IP address in network settings. Do not publish the address, scan other devices or change router settings without permission.</p>
+              <p><strong>Think:</strong> Is your local IP address necessarily the same as the public IP address seen by a website? Explain the role a home router may play.</p>
+            </div>
+            <h2>Common misconception: IP address versus domain name</h2>
+            <p>A domain name is a human-friendly name; an IP address is used to route network traffic. DNS helps connect the two, but caching, multiple addresses and content-delivery networks mean the mapping is not always a simple permanent one-to-one relationship.</p>
+            <h2>Further reading</h2>
+            <ul>
+              <li><a href="https://developer.mozilla.org/en-US/docs/Learn_web_development/Howto/Web_mechanics/How_does_the_Internet_work" target="_blank" rel="noopener noreferrer">MDN: How does the Internet work?</a></li>
+              <li><a href="https://www.cloudflare.com/learning/dns/what-is-dns/" target="_blank" rel="noopener noreferrer">Cloudflare Learning Center: What is DNS?</a></li>
+              <li><a href="https://www.rfc-editor.org/rfc/rfc791" target="_blank" rel="noopener noreferrer">IETF RFC 791: Internet Protocol (IPv4)</a></li>
             </ul>
 
             <h2>
