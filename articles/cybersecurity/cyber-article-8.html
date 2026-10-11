@@ -729,9 +729,11 @@
 <h2>Use trusted advisories and document exceptions</h2>
 <p>Use vendor advisories and recognized vulnerability resources to validate affected versions and available fixes. If a patch cannot be applied immediately, record the reason, accountable owner, temporary mitigation, review date and planned resolution. An accepted exception should remain visible and should not silently become permanent.</p>
 
-<h2>
-                Final thoughts
-              </h2>
+<h2>Prioritize vulnerabilities by exposure and business impact</h2>
+<p>Do not rank remediation by severity score alone. For each finding, record whether the asset is internet-facing, whether the vulnerability is known to be exploited, the sensitivity of the affected system, the available attack path, and the likely business impact. Use the CISA Known Exploited Vulnerabilities Catalog as one important signal, alongside vendor advisories and your own asset inventory. A lower-scored issue on an exposed, critical service may deserve attention before a higher-scored issue on an isolated test host.</p>
+<p>Assign a remediation owner and target date based on risk, then verify the fix with a rescan or an appropriate test. If immediate remediation is not possible, document a time-limited exception, compensating controls and the person who accepts the risk. Track overdue critical items and recurring causes so the program improves asset visibility and patching practices—not just the number of tickets closed.</p><h2>
+              Final thoughts
+            </h2>
 
               <p>
                 Vulnerability management is not a one-time scan or a
