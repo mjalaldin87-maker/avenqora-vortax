@@ -729,9 +729,12 @@
 <h2>Track the data's lineage and access</h2>
 <p>When a report looks wrong, teams need to trace the output back to its source, transformation and processing time. Record enough lineage and operational metadata to investigate issues, while avoiding unnecessary copies of sensitive customer information. Restrict pipeline credentials to the specific sources and destinations the job requires.</p>
 
+<h2>A reliability checklist for production data pipelines</h2>
+<p>For each pipeline, define the expected input schema, freshness target, acceptable error rate, owner and downstream consumers. Validate records at ingestion, quarantine malformed or unexpected data instead of silently dropping it, and make retries safe: a retried job should not create duplicate business events. Track both technical health (failed runs, queue depth, processing lag and retry counts) and data quality (missing fields, duplicate identifiers, unexpected value ranges and late-arriving records).</p>
+<p>Plan for recovery before an incident. Keep enough metadata to identify which batch or event failed, make reprocessing repeatable, and document how to replay data without double-counting. Alert on symptoms that affect users or business decisions, not every harmless warning. Restrict access to sensitive datasets, avoid putting secrets or personal data in logs, and set retention limits for raw and intermediate data. A pipeline is reliable when teams can detect bad output, explain its impact and recover with controlled steps.</p>
 <h2>
-                Final thoughts
-              </h2>
+              Final thoughts
+            </h2>
 
               <p>
                 Scalable data pipelines are not simply about moving
