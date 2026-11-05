@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Security Logging for Businesses: What to Collect and Review | Avenqora Vortax</title><meta name="description" content="Create a practical security logging plan covering priority events, centralized collection, log integrity, access, retention, detection and incident response."><meta name="robots" content="index, follow"><meta name="author" content="Zia Carter">
+<link rel="canonical" href="https://avenqoravortax.com/articles/cybersecurity/cyber-article-13.html"><meta property="og:type" content="article"><meta property="og:title" content="Security Logging for Businesses: What to Collect and Review | Avenqora Vortax"><meta property="og:description" content="Create a practical security logging plan covering priority events, centralized collection, log integrity, access, retention, detection and incident response."><meta property="og:url" content="https://avenqoravortax.com/articles/cybersecurity/cyber-article-13.html"><meta property="og:image" content="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=1400&q=85"><meta property="og:site_name" content="Avenqora Vortax"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="Security Logging for Businesses: What to Collect and Review | Avenqora Vortax"><meta name="twitter:description" content="Create a practical security logging plan covering priority events, centralized collection, log integrity, access, retention, detection and incident response."><meta name="twitter:image" content="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=1400&q=85">
+<script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Security Logging for Businesses: What to Collect and Review",
+  "description": "Create a practical security logging plan covering priority events, centralized collection, log integrity, access, retention, detection and incident response.",
+  "image": [
+    "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=1400&q=85"
+  ],
+  "datePublished": "2026-11-05",
+  "dateModified": "2026-11-05",
+  "author": {
+    "@type": "Person",
+    "name": "Zia Carter",
+    "url": "https://avenqoravortax.com/team.html"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Avenqora Vortax",
+    "url": "https://avenqoravortax.com/"
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://avenqoravortax.com/articles/cybersecurity/cyber-article-13.html"
+  },
+  "inLanguage": "en"
+}</script><link rel="stylesheet" href="../../style.css"></head><body>
+<header class="site-header"><div class="container header-inner"><a class="site-logo" href="../../index.html">Avenqora Vortax</a><button class="menu-toggle" type="button" aria-label="Open navigation" aria-expanded="false" data-menu-button>☰</button><nav class="main-nav" aria-label="Main navigation" data-navigation><a href="../../index.html">Home</a><a href="../../tech-saas.html">Tech &amp; SaaS</a><a href="../../cybersecurity.html" aria-current="page">Cybersecurity</a><a href="../../b2b.html">B2B Solutions</a><a href="../../student-hub.html">Student Hub</a><a href="../../search.html">Search</a></nav></div></header>
+<main><article><section class="article-hero"><div class="container article-hero-content"><span class="eyebrow">Cybersecurity</span><h1>Security Logging for Businesses: What to Collect and Review</h1><p class="article-intro">Security logs are useful only when an organization can identify the events that matter, protect the records and review them in time to act. A logging program should begin with business risks and investigation needs, not with a decision to collect everything.</p><div class="article-meta"><span>Written by <a href="../../team.html">Zia Carter — Writer &amp; Editor</a></span><time datetime="2026-11-05">November 5, 2026</time><span>11 min read</span><span>Last updated: November 5, 2026</span></div></div></section>
+<section class="section article-section"><div class="container article-layout"><div class="article-main"><figure class="article-feature-figure"><img class="article-feature-image" src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=1400&q=85" alt="Cybersecurity analyst dashboard with digital security imagery" loading="lazy" decoding="async"><figcaption>Cybersecurity analyst dashboard with digital security imagery. Image served externally; Avenqora Vortax does not host the image file.</figcaption></figure><div class="article-content"><p>When an account is compromised or a system behaves unexpectedly, investigators need a reliable record of what happened. Which account signed in? Which device was used? What changed? Which system received the request? Without useful logs, a team may be left trying to reconstruct an incident from memory.</p>
+<h2>What security logging is meant to achieve</h2>
+<p>Security logging records events that can help an organization detect suspicious activity, investigate incidents, verify controls and understand changes to important systems. Log management includes generating, transmitting, storing, accessing and disposing of those records. NIST's log-management guidance emphasizes planning the process across an organization rather than treating logging as a single software purchase.</p>
+<h2>Start with systems that matter to the business</h2>
+<p>Prioritize sources based on what an attacker or an operational failure could affect. Common starting points include:</p>
+<ul>
+<li>Identity providers, authentication systems and privileged account activity.</li>
+<li>Email and collaboration platforms, including mailbox rules and delegated access changes.</li>
+<li>Endpoints and servers that support customer-facing services.</li>
+<li>Firewalls, remote access gateways, DNS and network security tools.</li>
+<li>Cloud control planes, administrative actions, API activity and storage permissions.</li>
+<li>Critical business applications, payment systems and databases.</li>
+<li>Backup platforms and systems used to restore service.</li>
+</ul>
+<p>The right sources depend on the organization's architecture. A small company using managed SaaS systems may not control every infrastructure log, but it can still review available audit events, identity logs, administrator actions and vendor security reports.</p>
+<h2>Define what a useful event should contain</h2>
+<p>A log should provide enough context for a person or detection system to understand the event. Useful fields often include a timestamp with time-zone context, actor or service identity, source, target resource, action, outcome, event category and a correlation identifier. Record the fields that are necessary for investigation and operations; avoid collecting extra personal data simply because a system makes it available.</p>
+<p>Consistency matters. If one system records a user as an email address and another uses an internal ID, teams need a documented way to relate those identities. Synchronized clocks and clear time formats also make it easier to reconstruct a sequence across multiple systems.</p>
+<h2>Centralize carefully and protect integrity</h2>
+<p>Centralized collection can make it easier to search events across endpoints, cloud services and business applications. It can also create a high-value repository. Restrict who can read, export, change or delete logs. Protect transport and storage, monitor administrative activity on the logging platform and preserve records against unauthorized alteration.</p>
+<p>Keep logging infrastructure separate from the systems it monitors where practical. If an attacker can compromise a production environment and erase the only audit trail from that same environment, the organization may lose evidence when it is needed most.</p>
+<h2>Choose retention based on use and obligations</h2>
+<p>There is no universal retention period that fits every organization. Requirements can depend on industry rules, contracts, privacy law, incident needs, storage cost and the sensitivity of the records. Define a retention schedule for each major log category, document the reason and review it with legal, privacy and security owners where appropriate.</p>
+<p>Longer retention is not automatically better. Excessive retention can increase privacy and access risk. Too little retention can leave investigators without evidence. The objective is a justified period that supports the organization's actual needs.</p>
+<h2>Turn logs into detection questions</h2>
+<p>Collecting logs does not create security by itself. Teams should identify the events that would indicate a meaningful risk and decide how they will be reviewed. Examples include repeated authentication failures followed by a successful login, a new administrator account, an unexpected mailbox forwarding rule, a sensitive permission change or an unusual transfer of data.</p>
+<p>Each detection should have an owner and an action. Decide who receives the alert, how severity is assessed, what evidence is collected and when an incident is escalated. Review false positives and missed events so that the detection process improves over time.</p>
+<h2>A practical logging implementation sequence</h2>
+<ol>
+<li>List critical business systems and the risks each system represents.</li>
+<li>Identify the event sources available from each system and provider.</li>
+<li>Choose a baseline set of high-value events before expanding collection.</li>
+<li>Define common fields, timestamps, identity mapping and event naming.</li>
+<li>Centralize the records and restrict access to the logging environment.</li>
+<li>Set retention, privacy, deletion and evidence-preservation rules.</li>
+<li>Create a small set of detection use cases connected to an incident playbook.</li>
+<li>Test whether the team can answer realistic investigation questions using the collected data.</li>
+</ol>
+<h2>Worked exercise: investigate a new administrator</h2>
+<p>Imagine an unfamiliar administrator account appears in a business application. A useful logging plan should help the team answer: who created it, which account performed the action, where the request originated, whether approval exists, what permissions were granted and whether the account accessed sensitive records afterward.</p>
+<p>If those facts are not available, record the gap and assign an owner to improve coverage. This is a more useful outcome than simply buying another dashboard.</p>
+<h2>Frequently asked questions</h2>
+<h3>Does a small business need a security information and event management platform?</h3>
+<p>Not necessarily. The first requirement is an intentional logging plan and a way to review the most important events. A managed service, built-in audit reports or a smaller monitoring tool may be appropriate depending on scale and risk.</p>
+<h3>Should passwords or access tokens appear in logs?</h3>
+<p>No. Secrets and credentials should be excluded or redacted. Logs should provide investigation context without creating another source of exposed sensitive information.</p>
+<h3>Who should own log management?</h3>
+<p>Security, IT, application owners, privacy and legal teams may all have responsibilities. One accountable owner should coordinate the policy, while individual system owners maintain the quality of their event sources.</p>
+<h2>Key takeaway</h2>
+<p>Good logging is selective, protected and connected to action. Start with important assets, capture events that answer real investigation questions, control access and retention, and regularly test whether the evidence would help your team respond to an incident.</p></div></div></div></section>
+<section class="section"><div class="container"><div class="article-content"><h2>Sources and further reading</h2><p>These primary and institutional references were consulted for factual verification. The explanations, examples and checklists above are independently written.</p><ul><li><strong>NIST:</strong> <a href="https://csrc.nist.gov/pubs/sp/800/92/r1/ipd" target="_blank" rel="noopener noreferrer">SP 800-92 Rev. 1: Cybersecurity Log Management Planning Guide (Initial Public Draft)</a></li><li><strong>Australian Cyber Security Centre:</strong> <a href="https://www.cyber.gov.au/publication/best-practices-for-event-logging-and-threat-detection" target="_blank" rel="noopener noreferrer">Best practices for event logging and threat detection</a></li><li><strong>Canadian Centre for Cyber Security:</strong> <a href="https://www.cyber.gc.ca/en/news-events/best-practices-event-logging-and-threat-detection" target="_blank" rel="noopener noreferrer">Best practices for event logging and threat detection</a></li></ul></div></div></section>
+</article></main><script src="../../script.js" defer></script></body></html>
