@@ -1,0 +1,66 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Database Fundamentals: Tables, Keys and Queries | Avenqora Vortax Student Hub</title><meta name="description" content="Learn database basics through tables, records, primary keys, relationships and beginner SQL queries with a practical library example."><meta name="robots" content="index, follow"><meta name="author" content="Zia Carter"><link rel="canonical" href="https://avenqoravortax.com/student-hub/technology/technology-lesson-4.html">
+<meta property="og:type" content="article"><meta property="og:title" content="Database Fundamentals: Tables, Keys and Queries | Avenqora Vortax"><meta property="og:description" content="Learn database basics through tables, records, primary keys, relationships and beginner SQL queries with a practical library example."><meta property="og:url" content="https://avenqoravortax.com/student-hub/technology/technology-lesson-4.html"><meta property="og:image" content="https://images.unsplash.com/photo-1544383835-bda2bc66a55d?auto=format&fit=crop&w=1400&q=85"><meta property="og:site_name" content="Avenqora Vortax"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="Database Fundamentals: Tables, Keys and Queries | Avenqora Vortax"><meta name="twitter:description" content="Learn database basics through tables, records, primary keys, relationships and beginner SQL queries with a practical library example."><meta name="twitter:image" content="https://images.unsplash.com/photo-1544383835-bda2bc66a55d?auto=format&fit=crop&w=1400&q=85"><script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "LearningResource",
+  "name": "Database Fundamentals: Tables, Keys and Queries",
+  "description": "Learn database basics through tables, records, primary keys, relationships and beginner SQL queries with a practical library example.",
+  "url": "https://avenqoravortax.com/student-hub/technology/technology-lesson-4.html",
+  "image": "https://images.unsplash.com/photo-1544383835-bda2bc66a55d?auto=format&fit=crop&w=1400&q=85",
+  "learningResourceType": "Lesson",
+  "educationalLevel": "Beginner",
+  "inLanguage": "en",
+  "isAccessibleForFree": true,
+  "dateCreated": "2026-11-05",
+  "dateModified": "2026-11-05",
+  "author": {
+    "@type": "Person",
+    "name": "Zia Carter",
+    "url": "https://avenqoravortax.com/team.html"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Avenqora Vortax",
+    "url": "https://avenqoravortax.com/"
+  }
+}</script><link rel="stylesheet" href="../../style.css"></head><body>
+<header class="site-header"><div class="container header-inner"><a class="site-logo" href="../../index.html">Avenqora Vortax</a><button class="menu-toggle" type="button" aria-label="Open navigation" aria-expanded="false" data-menu-button>☰</button><nav class="main-nav" aria-label="Main navigation" data-navigation><a href="../../index.html">Home</a><a href="../../tech-saas.html">Tech &amp; SaaS</a><a href="../../cybersecurity.html">Cybersecurity</a><a href="../../b2b.html">B2B Solutions</a><a href="../../student-hub.html" aria-current="page">Student Hub</a><a href="../../search.html">Search</a></nav></div></header>
+<main><article><section class="article-hero"><div class="container article-hero-content"><span class="eyebrow">Student Hub · Technology</span><h1>Database Fundamentals: Tables, Keys and Queries</h1><p class="article-intro">Databases help applications store information in a structured way so it can be found, updated and connected reliably. This lesson introduces tables, records, keys and simple SQL queries using a small library example.</p><div class="article-meta"><span>Prepared by <a href="../../team.html">Zia Carter</a></span><time datetime="2026-11-05">November 5, 2026</time><span>Beginner lesson</span></div><div class="hero-actions"><a class="button button-secondary" href="../../student-hub.html#technology">Back to Technology lessons</a></div></div></section>
+<section class="section article-section"><div class="container article-layout"><div class="article-main"><figure class="article-feature-figure"><img class="article-feature-image" src="https://images.unsplash.com/photo-1544383835-bda2bc66a55d?auto=format&fit=crop&w=1400&q=85" alt="Abstract database server and data storage visualization" loading="lazy" decoding="async"><figcaption>Abstract database server and data storage visualization. Image served externally; Avenqora Vortax does not host the image file.</figcaption></figure><div class="article-content"><h2>What you will learn</h2><ul><li>Explain what a database stores and why structure matters</li><li>Identify tables, rows, columns, primary keys and foreign keys</li><li>Read simple SELECT queries and understand basic relationships</li></ul><h2>What is a database?</h2>
+<p>A database is an organized collection of information that a computer system can store, retrieve and update. A school might store students and courses. A shop might store products, customers and orders. A website may store accounts, posts and comments.</p>
+<p>Many applications use a database so information remains available after a page is closed or a computer is restarted. The database is not the same as the application screen: it is the managed store of records behind the interface.</p>
+<h2>Tables, rows and columns</h2>
+<p>In a relational database, information is commonly organized into tables. A table represents one type of thing, such as a student or a book. Each row represents one record. Each column represents an attribute of that record.</p>
+<p>For example, a Books table might contain <code>book_id</code>, <code>title</code>, <code>author</code> and <code>published_year</code>. A row could describe one book. The column type tells the database what kind of value is expected, such as text, a whole number or a date.</p>
+<h2>Why keys matter</h2>
+<p>A <strong>primary key</strong> is a field or set of fields used to identify a row uniquely. Two books may have the same title, so a library can use a separate book ID to distinguish them.</p>
+<p>A <strong>foreign key</strong> is a value that refers to a key in another table. A Loans table can store a member ID that points to a Members table. This connects related records without repeating every member detail on each loan row.</p>
+<h2>Read a simple SQL query</h2>
+<p>SQL is a language used by many relational databases. A query asks the database to return or change information. This example retrieves books from a table:</p>
+<pre><code>SELECT title, author
+FROM Books
+WHERE published_year &gt;= 2020
+ORDER BY title;</code></pre>
+<p><code>SELECT</code> names the columns to return. <code>FROM</code> identifies the table. <code>WHERE</code> filters the rows. <code>ORDER BY</code> sorts the result. The query does not change the stored records.</p>
+<h2>Connect information with a join</h2>
+<p>Suppose a library stores members separately from loans. The loan row contains the member ID, while the member's name is stored in Members. A join can combine the related information:</p>
+<pre><code>SELECT Members.name, Loans.due_date
+FROM Loans
+JOIN Members
+  ON Loans.member_id = Members.member_id;</code></pre>
+<p>The <code>ON</code> condition explains how the rows are related. A join does not mean that the tables have been permanently merged; it produces a result for the query.</p>
+<h2>Keep data trustworthy</h2>
+<p>Good database design reduces unnecessary duplication and helps protect accuracy. Use appropriate data types, define required fields, create relationships deliberately and validate values before saving them. Access controls should limit who can read or change records.</p>
+<p>Applications should also keep user input separate from SQL command structure. Parameterized queries help reduce SQL injection risk; do not build a database command by joining untrusted text into the query string.</p>
+<h2>Worked example: a library loan</h2>
+<p>Imagine a library lends one book to one member. The system might store the book in Books, the member in Members and the borrowing event in Loans. The loan record links the other two using their IDs and records the checkout and due dates. This structure allows the library to find the member, identify the book and calculate which loans are overdue without copying full book and member details into every record.</p>
+<h2>Practice task</h2>
+<ol>
+<li>Design a Students table with a unique student ID, name and email.</li>
+<li>Design a Courses table with a unique course ID and title.</li>
+<li>Design an Enrolments table that links a student to a course.</li>
+<li>Explain why the student name should not be the primary key.</li>
+<li>Write a SELECT query that displays the titles of all courses.</li>
+</ol>
+<h2>Quick review</h2>
+<ul><li>A table groups records of one type.</li><li>A row is one record; a column is one attribute.</li><li>A primary key identifies a record uniquely.</li><li>A foreign key connects a record to another table.</li><li>SQL queries retrieve or change data according to their commands.</li></ul><h2>Further reading</h2><ul><li><strong>PostgreSQL:</strong> <a href="https://www.postgresql.org/docs/current/tutorial.html" target="_blank" rel="noopener noreferrer">PostgreSQL Tutorial: Relational concepts and SQL</a></li><li><strong>SQLite:</strong> <a href="https://www.sqlite.org/lang.html" target="_blank" rel="noopener noreferrer">SQL Language Reference</a></li><li><strong>MDN:</strong> <a href="https://developer.mozilla.org/en-US/docs/Learn_web_development/Extensions/Server-side/First_steps/Introduction" target="_blank" rel="noopener noreferrer">Introduction to server-side programming</a></li></ul></div></div></div></section></article></main><script src="../../script.js" defer></script></body></html>
