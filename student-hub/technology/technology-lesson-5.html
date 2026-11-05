@@ -1,0 +1,57 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Operating Systems: Processes, Memory and File Systems | Avenqora Vortax Student Hub</title><meta name="description" content="Understand what an operating system does through processes, CPU scheduling, memory management, files, permissions and a practical multitasking example."><meta name="robots" content="index, follow"><meta name="author" content="Zia Carter"><link rel="canonical" href="https://avenqoravortax.com/student-hub/technology/technology-lesson-5.html">
+<meta property="og:type" content="article"><meta property="og:title" content="Operating Systems: Processes, Memory and File Systems | Avenqora Vortax"><meta property="og:description" content="Understand what an operating system does through processes, CPU scheduling, memory management, files, permissions and a practical multitasking example."><meta property="og:url" content="https://avenqoravortax.com/student-hub/technology/technology-lesson-5.html"><meta property="og:image" content="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1400&q=85"><meta property="og:site_name" content="Avenqora Vortax"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="Operating Systems: Processes, Memory and File Systems | Avenqora Vortax"><meta name="twitter:description" content="Understand what an operating system does through processes, CPU scheduling, memory management, files, permissions and a practical multitasking example."><meta name="twitter:image" content="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1400&q=85"><script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "LearningResource",
+  "name": "Operating Systems: Processes, Memory and File Systems",
+  "description": "Understand what an operating system does through processes, CPU scheduling, memory management, files, permissions and a practical multitasking example.",
+  "url": "https://avenqoravortax.com/student-hub/technology/technology-lesson-5.html",
+  "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1400&q=85",
+  "learningResourceType": "Lesson",
+  "educationalLevel": "Beginner",
+  "inLanguage": "en",
+  "isAccessibleForFree": true,
+  "dateCreated": "2026-11-05",
+  "dateModified": "2026-11-05",
+  "author": {
+    "@type": "Person",
+    "name": "Zia Carter",
+    "url": "https://avenqoravortax.com/team.html"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Avenqora Vortax",
+    "url": "https://avenqoravortax.com/"
+  }
+}</script><link rel="stylesheet" href="../../style.css"></head><body>
+<header class="site-header"><div class="container header-inner"><a class="site-logo" href="../../index.html">Avenqora Vortax</a><button class="menu-toggle" type="button" aria-label="Open navigation" aria-expanded="false" data-menu-button>☰</button><nav class="main-nav" aria-label="Main navigation" data-navigation><a href="../../index.html">Home</a><a href="../../tech-saas.html">Tech &amp; SaaS</a><a href="../../cybersecurity.html">Cybersecurity</a><a href="../../b2b.html">B2B Solutions</a><a href="../../student-hub.html" aria-current="page">Student Hub</a><a href="../../search.html">Search</a></nav></div></header>
+<main><article><section class="article-hero"><div class="container article-hero-content"><span class="eyebrow">Student Hub · Technology</span><h1>Operating Systems: Processes, Memory and File Systems</h1><p class="article-intro">An operating system coordinates hardware and software so applications can run safely and share resources. This lesson explains processes, memory and file systems using everyday computer activities.</p><div class="article-meta"><span>Prepared by <a href="../../team.html">Zia Carter</a></span><time datetime="2026-11-05">November 5, 2026</time><span>Beginner lesson</span></div><div class="hero-actions"><a class="button button-secondary" href="../../student-hub.html#technology">Back to Technology lessons</a></div></div></section>
+<section class="section article-section"><div class="container article-layout"><div class="article-main"><figure class="article-feature-figure"><img class="article-feature-image" src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1400&q=85" alt="Computer hardware and circuit board representing operating system infrastructure" loading="lazy" decoding="async"><figcaption>Computer hardware and circuit board representing operating system infrastructure. Image served externally; Avenqora Vortax does not host the image file.</figcaption></figure><div class="article-content"><h2>What you will learn</h2><ul><li>Describe the role of an operating system</li><li>Distinguish a running process from a stored program</li><li>Explain basic memory and file-system responsibilities</li></ul><h2>What does an operating system do?</h2>
+<p>An operating system (OS) is the core software layer that manages a computer's resources and provides services to applications. It helps programs use the processor, memory, storage and connected devices without each program having to control the hardware directly.</p>
+<p>Examples include desktop operating systems, mobile operating systems and server operating systems. Their interfaces differ, but many core responsibilities are similar.</p>
+<h2>Program versus process</h2>
+<p>A program is a set of instructions stored for execution. A process is a running instance of a program, together with the state and resources the operating system tracks for it. Opening the same application twice can create more than one process, depending on how the application is designed.</p>
+<p>A process has an execution state and may have one or more threads. The operating system schedules runnable work so that processes and threads receive time on available CPU cores.</p>
+<h2>CPU scheduling and multitasking</h2>
+<p>Many applications appear to run at the same time. The operating system coordinates this by switching between runnable tasks and allocating CPU time. On a multi-core processor, more than one task may run at once. Scheduling decisions can consider responsiveness, fairness, priority and workload requirements.</p>
+<p>When a computer becomes slow, the cause may be CPU usage, memory pressure, storage activity, network delays or an application waiting for another service. The OS helps expose these resource measures through system-monitoring tools.</p>
+<h2>Memory management</h2>
+<p>Applications need memory to hold instructions and working data. The operating system manages which memory regions belong to which process and helps prevent one program from freely overwriting another program's memory.</p>
+<p>Virtual memory gives processes an address space that the OS and hardware map to physical memory and, where supported, other storage mechanisms. It helps with isolation and flexible allocation, but it does not mean that a computer has unlimited fast memory. When working sets exceed available RAM, performance can degrade because the system must move data between memory and storage.</p>
+<h2>Files and file systems</h2>
+<p>A file system organizes data on storage devices. It tracks names, directories, metadata and the locations of file contents. Different operating systems support different file systems and features. Permissions help control which users or processes can read, write or execute files.</p>
+<p>A folder is a way to organize references to files. A file name alone does not explain who can access the file or whether it is backed up. Storage permissions, encryption and backup policies are separate parts of managing data safely.</p>
+<h2>How the OS connects hardware and applications</h2>
+<p>Applications normally request operating-system services through defined interfaces. For example, a text editor asks the OS to open a file, read data, save changes or display information. Device drivers help the OS communicate with particular hardware. The OS coordinates these requests and enforces resource and access rules.</p>
+<h2>Worked example: attending an online class</h2>
+<p>When a student opens a video meeting, the OS creates or manages processes for the meeting application and related services. It allocates memory for the application, schedules CPU time for audio and video work, reads configuration files, communicates with the network interface and handles camera and microphone access. If too many programs compete for resources, video may stutter even when the internet connection is stable.</p>
+<h2>Practice task</h2>
+<ol>
+<li>Open the task or activity monitor on a computer you are allowed to use.</li>
+<li>Identify one process and record its CPU and memory use.</li>
+<li>Find where the operating system displays storage information.</li>
+<li>Explain why closing an unused application might improve performance.</li>
+<li>Describe one reason file permissions matter on a shared computer.</li>
+</ol>
+<h2>Quick review</h2>
+<ul><li>The OS manages hardware resources and provides services to applications.</li><li>A process is a running instance of a program.</li><li>Scheduling allocates CPU time among runnable work.</li><li>Memory management supports allocation and isolation.</li><li>A file system organizes stored information and metadata.</li></ul><h2>Further reading</h2><ul><li><strong>Virtual University of Pakistan OpenCourseware:</strong> <a href="https://ocw.vu.edu.pk/CourseOverview.aspx?cat=Computer+Science%2FInformation+Technology+&course=CS604" target="_blank" rel="noopener noreferrer">CS604: Operating Systems</a></li><li><strong>University of California San Diego:</strong> <a href="https://cseweb.ucsd.edu/classes/fa26/cse120-001/" target="_blank" rel="noopener noreferrer">CSE 120: Principles of Computer Operating Systems</a></li><li><strong>Operating Systems: Three Easy Pieces:</strong> <a href="https://pages.cs.wisc.edu/~remzi/OSTEP/" target="_blank" rel="noopener noreferrer">Free online textbook</a></li></ul></div></div></div></section></article></main><script src="../../script.js" defer></script></body></html>
