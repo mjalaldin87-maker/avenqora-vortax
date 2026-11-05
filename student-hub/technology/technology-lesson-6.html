@@ -1,0 +1,67 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Web Development Basics: HTML, CSS and JavaScript | Avenqora Vortax Student Hub</title><meta name="description" content="Learn how HTML, CSS and JavaScript work together to structure, style and add behavior to a web page through a simple example."><meta name="robots" content="index, follow"><meta name="author" content="Zia Carter"><link rel="canonical" href="https://avenqoravortax.com/student-hub/technology/technology-lesson-6.html">
+<meta property="og:type" content="article"><meta property="og:title" content="Web Development Basics: HTML, CSS and JavaScript | Avenqora Vortax"><meta property="og:description" content="Learn how HTML, CSS and JavaScript work together to structure, style and add behavior to a web page through a simple example."><meta property="og:url" content="https://avenqoravortax.com/student-hub/technology/technology-lesson-6.html"><meta property="og:image" content="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=1400&q=85"><meta property="og:site_name" content="Avenqora Vortax"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="Web Development Basics: HTML, CSS and JavaScript | Avenqora Vortax"><meta name="twitter:description" content="Learn how HTML, CSS and JavaScript work together to structure, style and add behavior to a web page through a simple example."><meta name="twitter:image" content="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=1400&q=85"><script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "LearningResource",
+  "name": "Web Development Basics: HTML, CSS and JavaScript",
+  "description": "Learn how HTML, CSS and JavaScript work together to structure, style and add behavior to a web page through a simple example.",
+  "url": "https://avenqoravortax.com/student-hub/technology/technology-lesson-6.html",
+  "image": "https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=1400&q=85",
+  "learningResourceType": "Lesson",
+  "educationalLevel": "Beginner",
+  "inLanguage": "en",
+  "isAccessibleForFree": true,
+  "dateCreated": "2026-11-05",
+  "dateModified": "2026-11-05",
+  "author": {
+    "@type": "Person",
+    "name": "Zia Carter",
+    "url": "https://avenqoravortax.com/team.html"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Avenqora Vortax",
+    "url": "https://avenqoravortax.com/"
+  }
+}</script><link rel="stylesheet" href="../../style.css"></head><body>
+<header class="site-header"><div class="container header-inner"><a class="site-logo" href="../../index.html">Avenqora Vortax</a><button class="menu-toggle" type="button" aria-label="Open navigation" aria-expanded="false" data-menu-button>☰</button><nav class="main-nav" aria-label="Main navigation" data-navigation><a href="../../index.html">Home</a><a href="../../tech-saas.html">Tech &amp; SaaS</a><a href="../../cybersecurity.html">Cybersecurity</a><a href="../../b2b.html">B2B Solutions</a><a href="../../student-hub.html" aria-current="page">Student Hub</a><a href="../../search.html">Search</a></nav></div></header>
+<main><article><section class="article-hero"><div class="container article-hero-content"><span class="eyebrow">Student Hub · Technology</span><h1>Web Development Basics: HTML, CSS and JavaScript</h1><p class="article-intro">A web page is built from different technologies that work together. HTML gives content structure, CSS controls presentation and JavaScript adds behavior. This lesson introduces the role of each technology and how they fit into a browser.</p><div class="article-meta"><span>Prepared by <a href="../../team.html">Zia Carter</a></span><time datetime="2026-11-05">November 5, 2026</time><span>Beginner lesson</span></div><div class="hero-actions"><a class="button button-secondary" href="../../student-hub.html#technology">Back to Technology lessons</a></div></div></section>
+<section class="section article-section"><div class="container article-layout"><div class="article-main"><figure class="article-feature-figure"><img class="article-feature-image" src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=1400&q=85" alt="Laptop displaying source code during front-end web development" loading="lazy" decoding="async"><figcaption>Laptop displaying source code during front-end web development. Image served externally; Avenqora Vortax does not host the image file.</figcaption></figure><div class="article-content"><h2>What you will learn</h2><ul><li>Explain the separate jobs of HTML, CSS and JavaScript</li><li>Recognize semantic page structure and basic styling</li><li>Describe how browser scripts respond to user interaction</li></ul><h2>How a browser displays a web page</h2>
+<p>A browser receives resources from a website and uses web standards to display the page. A simple site commonly uses HTML, CSS and JavaScript. These technologies have different responsibilities, so a project is easier to maintain when each is used for its intended purpose.</p>
+<h2>HTML: structure and meaning</h2>
+<p>HTML stands for HyperText Markup Language. It describes the structure of the page with elements. A heading identifies a section title, a paragraph groups text, a link points to another resource and a form collects user input.</p>
+<p>Semantic HTML uses elements that communicate the role of content. For example, <code>&lt;main&gt;</code> identifies the primary page content, <code>&lt;nav&gt;</code> identifies navigation and <code>&lt;article&gt;</code> can represent a self-contained piece of content. Meaningful structure helps browsers, assistive technologies and maintainers understand the page.</p>
+<h2>CSS: presentation and layout</h2>
+<p>CSS stands for Cascading Style Sheets. It controls how HTML content looks: colors, spacing, typography, borders and layout. CSS can also adapt a page to different screen sizes.</p>
+<p>A simple CSS rule has a selector and declarations. For example:</p>
+<pre><code>h1 {
+  font-size: 2rem;
+  line-height: 1.2;
+  color: #173b8f;
+}</code></pre>
+<p>This rule selects heading elements and sets their size, line height and text color. The content remains in the HTML; CSS changes its presentation.</p>
+<h2>JavaScript: behavior and interaction</h2>
+<p>JavaScript is a programming language used by browsers to add behavior. A script can respond to a button click, validate form input, update part of a page or request information from a server.</p>
+<pre><code>const button = document.querySelector("#show-message");
+const output = document.querySelector("#message");
+
+button.addEventListener("click", () => {
+  output.textContent = "The button was pressed.";
+});</code></pre>
+<p>This example finds a button and a message area, then changes the message when the button is clicked. The HTML needs matching elements with the IDs used by the script.</p>
+<h2>How the three technologies work together</h2>
+<p>HTML creates the button and message area. CSS makes them readable and visually clear. JavaScript defines what happens when the visitor activates the button. This separation makes changes easier: the text can change without rewriting the styling, and the design can change without changing the interaction logic.</p>
+<h2>Build a small page in stages</h2>
+<ol>
+<li>Create an HTML file with a page title, main heading, paragraph and link.</li>
+<li>Add a CSS file and style the text, spacing and page width.</li>
+<li>Add a button and a message element with unique IDs.</li>
+<li>Load a JavaScript file and add a click event listener.</li>
+<li>Open the page in a browser and test keyboard and pointer interaction.</li>
+<li>Resize the browser and check that content remains usable on a narrow screen.</li>
+</ol>
+<h2>Accessibility and quality basics</h2>
+<p>Use headings in a logical order, provide labels for form controls, write useful link text and add alternative text for meaningful images. Make sure the page can be navigated with a keyboard. Do not rely on color alone to communicate important information.</p>
+<p>Also test your page in more than one viewport. A page that looks correct on a large monitor may have overflowing content or tiny controls on a phone. Use browser developer tools to inspect errors and test changes carefully.</p>
+<h2>Quick review</h2>
+<ul><li>HTML describes page structure and meaning.</li><li>CSS controls presentation and layout.</li><li>JavaScript adds behavior and interaction.</li><li>Semantic elements help communicate content roles.</li><li>Testing includes accessibility and small-screen layouts.</li></ul><h2>Further reading</h2><ul><li><strong>MDN Web Docs:</strong> <a href="https://developer.mozilla.org/en-US/docs/Learn_web_development" target="_blank" rel="noopener noreferrer">Learn web development</a></li><li><strong>MDN Web Docs:</strong> <a href="https://developer.mozilla.org/en-US/docs/Learn_web_development/Getting_started/Web_standards/The_web_standards_model" target="_blank" rel="noopener noreferrer">The web standards model</a></li><li><strong>WHATWG:</strong> <a href="https://html.spec.whatwg.org/" target="_blank" rel="noopener noreferrer">HTML Living Standard</a></li><li><strong>MDN Web Docs:</strong> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide" target="_blank" rel="noopener noreferrer">JavaScript Guide</a></li></ul></div></div></div></section></article></main><script src="../../script.js" defer></script></body></html>
