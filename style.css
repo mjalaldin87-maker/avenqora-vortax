@@ -1505,3 +1505,42 @@ main select:focus {
     min-width: 170px;
   }
 }
+
+
+/* External editorial image block used by article and Student Hub lesson pages. */
+.article-feature-figure {
+  margin: 0 0 2rem;
+  overflow: hidden;
+  border-radius: var(--radius-medium, 18px);
+  background: #151a25;
+  box-shadow: var(--shadow);
+}
+
+.article-feature-image {
+  display: block;
+  width: 100%;
+  height: clamp(220px, 38vw, 430px);
+  object-fit: cover;
+  object-position: center;
+}
+
+.article-feature-figure figcaption {
+  padding: 10px 16px;
+  color: var(--text-muted, #b8c1d1);
+  font-size: .82rem;
+  line-height: 1.45;
+}
+
+@media (max-width: 640px) {
+  .article-feature-figure {
+    border-radius: 12px;
+  }
+
+  .article-feature-image {
+    height: 220px;
+  }
+
+  .article-feature-figure figcaption {
+    padding: 9px 12px;
+  }
+}
