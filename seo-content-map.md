@@ -131,3 +131,22 @@ The existing API integration article (Tech Article 11) remains the designated pa
 3. Do not add a meta keywords tag; it is not a useful Google ranking control.
 4. This map contains no invented search volumes, keyword difficulty scores or ranking promises. The Search Console snapshot above is the only quantified keyword evidence supplied so far.
 5. Review query, landing page, clicks, impressions, CTR and average position in Search Console before making further title or content changes.
+
+
+---
+
+## New content targets added on 17 November 2026
+
+These seven pages extend the existing 66-page map. Each page has a distinct intent and links to related, non-duplicate resources. The target phrases below are research candidates, not measured search-volume or difficulty figures.
+
+| Section | New page | Primary target | Supporting cluster |
+|---|---|---|---|
+| Tech & SaaS | [SaaS Renewal Management](articles/tech/tech-article-15.html) | SaaS renewal checklist | SaaS renewal management; software contract renewal; automatic renewal clause; SaaS notice deadline; license utilization |
+| Cybersecurity | [Ransomware Recovery Plan](articles/cybersecurity/cyber-article-15.html) | ransomware recovery plan for small businesses | small business ransomware recovery checklist; clean restore; backup verification; RTO; RPO |
+| B2B Solutions | [B2B Pricing Models](articles/b2b/b2b-article-15.html) | how to choose a B2B pricing model | B2B pricing models; seat-based pricing; usage-based pricing; tiered pricing; hybrid pricing |
+| Student Hub — Technology | [Programming Fundamentals](student-hub/technology/technology-lesson-7.html) | programming fundamentals for beginners | variables; data types; conditions; loops; beginner Python exercise |
+| Student Hub — Cybersecurity | [3-2-1 Backup Rule](student-hub/cybersecurity/cybersecurity-lesson-7.html) | 3-2-1 backup rule for students | student file backup; cloud sync vs backup; offline backup; restore testing |
+| Student Hub — Business | [One-Page Business Plan](student-hub/business/business-lesson-7.html) | one-page business plan for beginners | business plan outline; customer problem; value proposition; revenue model; market validation |
+| Student Hub — Digital Skills | [Digital File Management](student-hub/digital-skills/digital-skills-lesson-7.html) | digital file management for students | folder structure; file naming convention; version control; assignment submission checklist |
+
+For the full research workflow, competitor sample, content gap, backlink-magnet angles, five conversational question targets per topic and the internal/external linking plan, see [the seven-section research brief](seo-research-brief-2026-11-17.md).
