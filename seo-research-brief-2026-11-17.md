@@ -349,3 +349,18 @@ Each new page is assigned one primary search intent. Related links deliberately 
 - The only numeric query evidence supplied by the site owner for this review was Search Console's three-month API Integration cluster (for example, “api integration” with 340 impressions and 0 clicks). That query-to-page mapping should be monitored separately; this batch does not target API integration again.
 - The five conversational questions per page are research-derived PAA-style targets, not a claim that Google currently displays those exact questions in a PAA box.
 - Evaluate the new pages after they are live and crawled: URL Inspection, indexing status, query-to-page mapping, impressions, clicks, CTR and average position. Do not change title/date repeatedly before sufficient evidence exists.
+
+
+## Published URLs and final primary-keyword alignment
+
+| Section | Published URL | Primary target phrase |
+|---|---|---|
+| Tech & SaaS | [SaaS Renewal Checklist](articles/tech/tech-article-15.html) | SaaS renewal checklist |
+| Cybersecurity | [Ransomware Recovery Plan for Small Businesses](articles/cybersecurity/cyber-article-15.html) | ransomware recovery plan for small businesses |
+| B2B Solutions | [How to Choose a B2B Pricing Model](articles/b2b/b2b-article-15.html) | how to choose a B2B pricing model |
+| Student Hub — Technology | [Programming Fundamentals for Beginners](student-hub/technology/technology-lesson-7.html) | programming fundamentals for beginners |
+| Student Hub — Cybersecurity | [3-2-1 Backup Rule for Students](student-hub/cybersecurity/cybersecurity-lesson-7.html) | 3-2-1 backup rule for students |
+| Student Hub — Business | [One-Page Business Plan for Beginners](student-hub/business/business-lesson-7.html) | one-page business plan for beginners |
+| Student Hub — Digital Skills | [Digital File Management for Students](student-hub/digital-skills/digital-skills-lesson-7.html) | digital file management for students |
+
+Each published page has one primary target. Exact search-volume and keyword-difficulty metrics remain unreported because no connected keyword database was available for this audit. The phrases are qualitative long-tail candidates, not guaranteed low-KD scores.
