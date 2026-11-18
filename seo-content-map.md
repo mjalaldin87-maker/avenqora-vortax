@@ -169,3 +169,8 @@ These seven pages extend the map to 80 published content pages. Phrases are qual
 | Student Hub — Digital Skills | [PDF Annotation for Students](student-hub/digital-skills/digital-skills-lesson-8.html) | PDF annotation for students | highlight PDF; add PDF comments; PDF bookmarks; organize study notes; scanned PDF OCR |
 
 Before retargeting any of these pages, use Search Console query-to-page data to check whether an existing URL already owns the same intent. Do not treat a low-volume or difficulty score as measured unless it comes from a named keyword-data source.
+
+
+## 18 November 2026 audit record
+
+The site-wide content and search-readiness audit, including the seven source-grounded improvements made to the 18 November batch, is documented in [the 80-page SEO audit report](seo-audit-report-2026-11-18.md). The report distinguishes repository checks from live indexing, Core Web Vitals and backlink measurements that still require separate verification.
