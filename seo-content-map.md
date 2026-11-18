@@ -2,7 +2,7 @@
 
 Last reviewed: 18 November 2026
 
-This is the current editorial planning document for **73 published content pages**: the original 66-page baseline listed in the tables below, plus seven additional pages published on 17 November 2026 in the final section. Each page has one primary search intent to protect; supporting phrases are topical variations and question themes, not claims of search volume. Do not add keywords mechanically or repeat them unnaturally. Check Search Console query-to-page data before changing a page's target.
+This is the current editorial planning document for **80 published content pages**: the original 66-page baseline listed in the tables below, plus seven additional pages published on 17 November 2026 and seven published on 18 November 2026 in the dated sections below. Each page has one primary search intent to protect; supporting phrases are topical variations and question themes, not claims of search volume. Do not add keywords mechanically or repeat them unnaturally. Check Search Console query-to-page data before changing a page's target.
 
 ## Tech & SaaS publication
 
@@ -137,7 +137,7 @@ The existing API integration article (Tech Article 11) remains the designated pa
 
 ## New content targets added on 17 November 2026
 
-These seven pages extend the existing 66-page map. Each page has a distinct intent and links to related, non-duplicate resources. The target phrases below are research candidates, not measured search-volume or difficulty figures.
+These seven pages extend the existing 66-page baseline and the seven-page 17 November batch. Each page has a distinct intent and links to related, non-duplicate resources. The target phrases below are research candidates, not measured search-volume or difficulty figures.
 
 | Section | New page | Primary target | Supporting cluster |
 |---|---|---|---|
@@ -150,3 +150,22 @@ These seven pages extend the existing 66-page map. Each page has a distinct inte
 | Student Hub — Digital Skills | [Digital File Management](student-hub/digital-skills/digital-skills-lesson-7.html) | digital file management for students | folder structure; file naming convention; version control; assignment submission checklist |
 
 For the full research workflow, competitor sample, content gap, backlink-magnet angles, five conversational question targets per topic and the internal/external linking plan, see [the seven-section research brief](seo-research-brief-2026-11-17.md).
+
+
+---
+
+## New content targets added on 18 November 2026
+
+These seven pages extend the map to 80 published content pages. Phrases are qualitative long-tail targets selected for focused search intent and visible topic gaps; no monthly search volume or keyword-difficulty figures are claimed.
+
+| Section | New page | Primary target | Supporting cluster |
+|---|---|---|---|
+| Tech & SaaS | [SaaS Data Residency Checklist](articles/tech/tech-article-16.html) | SaaS data residency checklist | SaaS data residency; data sovereignty; cloud data location; data at rest; data processing location; backup geography; subprocessor access |
+| Cybersecurity | [Third-Party Cyber Risk Assessment](articles/cybersecurity/cyber-article-16.html) | third-party cyber risk assessment for small businesses | vendor cybersecurity assessment; supplier due diligence; vendor access review; subprocessor risk; supplier security evidence |
+| B2B Solutions | [B2B RFP Response Checklist](articles/b2b/b2b-article-16.html) | B2B RFP response checklist | how to respond to an RFP; bid/no-bid decision; proposal compliance matrix; tender submission checklist; bid qualification |
+| Student Hub — Technology | [Computer Hardware Components](student-hub/technology/technology-lesson-8.html) | computer hardware components for beginners | CPU; RAM; SSD vs HDD; GPU; motherboard; power supply; cooling |
+| Student Hub — Cybersecurity | [Public Wi-Fi Safety](student-hub/cybersecurity/cybersecurity-lesson-8.html) | public Wi-Fi safety for students | fake hotspot; evil twin Wi-Fi; captive portal; HTTPS; VPN limits; auto-join settings |
+| Student Hub — Business | [Break-Even Analysis](student-hub/business/business-lesson-8.html) | break-even analysis for beginners | break-even formula; contribution margin; fixed costs; variable costs; break-even units; break-even revenue |
+| Student Hub — Digital Skills | [PDF Annotation for Students](student-hub/digital-skills/digital-skills-lesson-8.html) | PDF annotation for students | highlight PDF; add PDF comments; PDF bookmarks; organize study notes; scanned PDF OCR |
+
+Before retargeting any of these pages, use Search Console query-to-page data to check whether an existing URL already owns the same intent. Do not treat a low-volume or difficulty score as measured unless it comes from a named keyword-data source.
