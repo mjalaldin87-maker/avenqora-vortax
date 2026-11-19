@@ -352,3 +352,25 @@ The new HTML files, archive source updates, Student Hub cards and JSON-LD counts
 ## 7. What is not claimed
 
 This research brief does not claim measured low keyword difficulty, guaranteed traffic, backlink authority or Google ranking. The competitor examples are content/SERP reference samples; a full referring-domain gap still requires a named backlink index such as Ahrefs, Semrush or another verified export. Live indexing and Search Console performance must be checked separately after deployment and crawling.
+
+
+## 7. Public keyword-data spot-check (19 November 2026)
+
+A limited public-data check was made after the initial topic research. It found a few **related-term estimates**, but not a clean, consistent exact-match volume/KD set for all seven primary keywords. These figures are not presented as exact demand for the pages published here.
+
+| Related phrase | Public estimate found | Important qualification |
+|---|---:|---|
+| `small business inventory management` | Trenzhub page headline reports 5,400 average monthly searches; latest month shown is July 2026 at 4,400. | The same page's related-keyword table lists 18,100 for the same phrase. This internal discrepancy means the number is not reliable enough to use as an exact volume. The page shows Competition Index 53 / Medium, which is not an organic SEO Keyword Difficulty score. |
+| `AI voice cloning` | Builders HQ reports 27,100 Google searches per month worldwide, averaged Oct 2025–Sep 2026; ad competition index 42 / Medium. | This is the broad voice-cloning term, not `AI voice cloning scams`. The related SERP is heavily associated with voice-generation tools, so it must not be mistaken for demand for a student safety lesson. |
+| `AI voice cloning` (separate provider) | RankDude reports 18,100 searches per month worldwide and 4,400 in the US for October 2026. | This is another broad-term estimate and differs from the Builders HQ estimate. Different tools, ranges and methods can produce different numbers; it is not a scam-query estimate. |
+| `voice cloning` | HTLL reports 6,600 US searches per month, KD 34, and 43 allintitle results, with its SERP snapshot dated 20 October 2026. | This is a broad US term, not a worldwide estimate and not the exact scam-prevention phrase. Treat the KD as that provider's own metric. |
+
+Sources:
+- Trenzhub, [small business inventory management](https://trenzhub.com/t/small_business_inventory_management) and [inventory control system for small business](https://trenzhub.com/t/inventory_control_system_for_small_business).
+- Builders HQ, [AI voice cloning search volume](https://buildershq.net/keywords/ai-voice-cloning).
+- RankDude, [AI voice cloning search trends](https://rankdude.ai/statistics/ai-voice-cloning/search-trends).
+- HTLL, [voice cloning keyword snapshot](https://hightechlowlife.online/term/voice-cloning/).
+
+**Decision:** no primary keyword was changed solely to chase these broad or inconsistent estimates. The Student Business lesson remains focused on stock records, reorder points and cycle counts—not software selection. The Student Cybersecurity lesson remains focused on impersonation scams and identity verification—not generating synthetic voices. For the other five pages, no reliable exact-match volume/KD figure was confirmed in this public check.
+
+For the next keyword pass, prioritize a country-specific Google Ads Keyword Planner or reputable SEO-platform export for the chosen target market. Record location, language, network, date range and match type. Separate advertising competition from organic keyword difficulty, and compare query intent before using a larger adjacent term.
