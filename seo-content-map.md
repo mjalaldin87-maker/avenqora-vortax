@@ -1,6 +1,6 @@
 # Avenqora Vortax — Existing Content Keyword Map
 
-Last reviewed: 18 November 2026
+Last reviewed: 19 November 2026
 
 This is the current editorial planning document for **80 published content pages**: the original 66-page baseline listed in the tables below, plus seven additional pages published on 17 November 2026 and seven published on 18 November 2026 in the dated sections below. Each page has one primary search intent to protect; supporting phrases are topical variations and question themes, not claims of search volume. Do not add keywords mechanically or repeat them unnaturally. Check Search Console query-to-page data before changing a page's target.
 
