@@ -8,7 +8,7 @@
 
 The existing keyword map, archive pages and the closely related existing articles/lessons were reviewed before selecting the new topics. Search-intent and competitor examples were checked against current search results and primary sources. The aim was to select a different reader task for each page rather than publish a synonym of an existing page.
 
-The phrases below are **qualitative long-tail keyword candidates**, not a claim that a third-party SEO tool measured low competition. No exact monthly search volumes, keyword-difficulty scores, ranking forecasts or backlink counts are stated because no verified keyword/backlink database report was supplied. The five questions under each topic are conversational/PAA-style targets, not a transcription of a verified live Google People Also Ask box.
+The primary phrases are **qualitative long-tail keyword candidates**. No clean, consistent exact-match monthly volume or organic keyword-difficulty set was confirmed for all seven primary terms. A limited public-data spot-check of adjacent phrases is recorded in Section 8; those estimates have caveats and are not treated as exact demand for the published page targets. No ranking forecasts or backlink counts are claimed. The five questions under each topic are conversational/PAA-style targets, not a transcription of a verified live Google People Also Ask box.
 
 ## 2. Existing-content overlap audit
 
@@ -354,7 +354,7 @@ The new HTML files, archive source updates, Student Hub cards and JSON-LD counts
 This research brief does not claim measured low keyword difficulty, guaranteed traffic, backlink authority or Google ranking. The competitor examples are content/SERP reference samples; a full referring-domain gap still requires a named backlink index such as Ahrefs, Semrush or another verified export. Live indexing and Search Console performance must be checked separately after deployment and crawling.
 
 
-## 7. Public keyword-data spot-check (19 November 2026)
+## 8. Public keyword-data spot-check (19 November 2026)
 
 A limited public-data check was made after the initial topic research. It found a few **related-term estimates**, but not a clean, consistent exact-match volume/KD set for all seven primary keywords. These figures are not presented as exact demand for the pages published here.
 
