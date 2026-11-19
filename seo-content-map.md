@@ -171,6 +171,34 @@ These seven pages extend the map to 80 published content pages. Phrases are qual
 Before retargeting any of these pages, use Search Console query-to-page data to check whether an existing URL already owns the same intent. Do not treat a low-volume or difficulty score as measured unless it comes from a named keyword-data source.
 
 
-## 18 November 2026 audit record
+---
 
-The site-wide content and search-readiness audit, including the seven source-grounded improvements made to the 18 November batch, is documented in [the 80-page SEO audit report](seo-audit-report-2026-11-18.md). The report distinguishes repository checks from live indexing, Core Web Vitals and backlink measurements that still require separate verification.
+## New content targets added on 19 November 2026
+
+These seven pages extend the content inventory from 80 to **87 published content pages**. Their intent was checked against the earlier topic map and the most closely related pages. Supporting phrases are semantic targets, not measured search-volume claims.
+
+| Section | New page | Primary target | Supporting cluster |
+|---|---|---|---|
+| Tech & SaaS | [API Rate Limiting Best Practices](articles/tech/tech-article-17.html) | API rate limiting best practices | API throttling; HTTP 429; Retry-After; token bucket; sliding window; fixed window; leaky bucket; exponential backoff; jitter |
+| Cybersecurity | [Cybersecurity Tabletop Exercise](articles/cybersecurity/cyber-article-17.html) | cybersecurity tabletop exercise for small businesses | incident response simulation; tabletop scenario; facilitator guide; after-action report; ransomware exercise; small business incident planning |
+| B2B Solutions | [B2B Invoice Payment Terms](articles/b2b/b2b-article-17.html) | B2B invoice payment terms | Net 15; Net 30; due on receipt; milestone payments; invoice due date; purchase-order reference; late commercial payments |
+| Student Hub — Technology | [Git and GitHub for Beginners](student-hub/technology/technology-lesson-9.html) | Git and GitHub for beginners | repositories; commits; branches; pull requests; GitHub Desktop; git status; git add; git push |
+| Student Hub — Cybersecurity | [AI Voice-Cloning Scams](student-hub/cybersecurity/cybersecurity-lesson-9.html) | AI voice cloning scams | voice deepfake scam; family emergency scam; impersonation call; identity verification; urgent payment request; vishing |
+| Student Hub — Business | [Inventory Management for Small Businesses](student-hub/business/business-lesson-9.html) | inventory management for small businesses | stock control; reorder point; safety stock; stocktake; cycle counting; slow-moving stock; supplier lead time |
+| Student Hub — Digital Skills | [How to Cite Sources for Students](student-hub/digital-skills/digital-skills-lesson-9.html) | how to cite sources for students | in-text citation; reference list; Works Cited; APA; MLA; paraphrasing; citation manager; Zotero |
+
+Before creating these targets, the existing map and adjacent pages were checked:
+- API rate limiting is a technical extension of API design (Tech Article 5), API integration (Article 11) and observability (Article 14), but it is not another general integration guide.
+- A tabletop is a discussion-based exercise that tests an incident plan; it complements, rather than duplicates, incident response (Cyber Article 7) and ransomware recovery (Article 15).
+- Invoice payment terms serve the supplier's receivables/payment workflow, not the buyer's procurement workflow (B2B Article 9) or pricing-model selection (Article 15).
+- Git/GitHub version control is distinct from programming fundamentals (Technology lesson 7), object-oriented programming and web development.
+- Voice-cloning scams are a specific identity-impersonation pattern, while the older phishing and social-engineering lessons explain broader tactics.
+- Inventory control is a practical stock/replenishment workflow; the earlier business operations and financial lessons do not calculate reorder points or cycle counts.
+- Source citation is a focused academic research skill; it extends digital literacy/research and PDF annotation without repeating general productivity or file management.
+
+The full topic research, competitor samples, content-gap notes, 12 semantic phrases, five conversational question targets, backlink-resource ideas and linking plan are in [the 19 November research brief](seo-research-brief-2026-11-19.md). Search volume, keyword difficulty and live Google PAA placement are not claimed because a verified keyword database/PAA export was not supplied.
+
+## Audit records
+
+- [18 November 2026 site-wide audit](seo-audit-report-2026-11-18.md)
+- [19 November 2026 keyword, competitor and content-gap research](seo-research-brief-2026-11-19.md)
