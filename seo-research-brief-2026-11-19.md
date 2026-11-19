@@ -342,6 +342,13 @@ Existing lessons cover digital literacy/research, productivity, AI study tools, 
 - Sitemap now contains 98 unique URLs, including the 7 new content pages; archive lastmod values are updated for 19 November.
 - The content map preserves the 17 November API Integration query evidence. The existing API Integration article remains the owner of that query cluster; the new API rate-limiting page has a narrower intent.
 
-## 5. What is not claimed
+
+## 6. Deployment verification at the end of this batch
+
+The new HTML files, archive source updates, Student Hub cards and JSON-LD counts, SEO content map and sitemap are present in the repository's `main` branch. Source-level checks confirm seven new URLs and 98 unique sitemap entries.
+
+**Public production verification remains pending.** When the public site was checked after these commits, the accessible category-page snapshots still showed the previous 16-item counts and direct retrieval of the seven new page URLs was unavailable to the checker. This can be caused by a Pages deployment delay or a stale public cache, but the evidence available here does not prove which. Do not treat the new URLs as live until they load in a normal browser and show the 19 November content. The GitHub repository update is confirmed; the production deployment is not.
+
+## 7. What is not claimed
 
 This research brief does not claim measured low keyword difficulty, guaranteed traffic, backlink authority or Google ranking. The competitor examples are content/SERP reference samples; a full referring-domain gap still requires a named backlink index such as Ahrefs, Semrush or another verified export. Live indexing and Search Console performance must be checked separately after deployment and crawling.
