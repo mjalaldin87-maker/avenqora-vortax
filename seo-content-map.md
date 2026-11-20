@@ -1,8 +1,8 @@
 # Avenqora Vortax — Existing Content Keyword Map
 
-Last reviewed: 19 November 2026
+Last reviewed: 20 November 2026
 
-This is the current editorial planning document for **80 published content pages**: the original 66-page baseline listed in the tables below, plus seven additional pages published on 17 November 2026 and seven published on 18 November 2026 in the dated sections below. Each page has one primary search intent to protect; supporting phrases are topical variations and question themes, not claims of search volume. Do not add keywords mechanically or repeat them unnaturally. Check Search Console query-to-page data before changing a page's target.
+This is the current editorial planning document for **94 published content pages**: the original 66-page baseline plus seven pages published on each of 17, 18, 19 and 20 November 2026. Each page has one primary search intent to protect; supporting phrases are topical variations and question themes, not claims of search volume. Do not add keywords mechanically or repeat them unnaturally. Check Search Console query-to-page data before changing a page's target.
 
 ## Tech & SaaS publication
 
@@ -202,3 +202,31 @@ The full topic research, competitor samples, content-gap notes, 12 semantic phra
 
 - [18 November 2026 site-wide audit](seo-audit-report-2026-11-18.md)
 - [19 November 2026 keyword, competitor and content-gap research](seo-research-brief-2026-11-19.md)
+
+
+---
+
+## New content targets added on 20 November 2026
+
+These seven pages extend the inventory from 87 to **94 content pages**. Each topic was compared with the existing keyword map and adjacent page content before selection. The primary terms are focused intent targets, not measured search-volume or difficulty scores.
+
+| Section | New page | Primary target | Supporting cluster |
+|---|---|---|---|
+| Tech & SaaS | [Webhook Security Best Practices](articles/tech/tech-article-18.html) | webhook security best practices | webhook signature verification; HMAC; replay protection; idempotent handler; secret rotation; payload validation; webhook retries |
+| Cybersecurity | [Cybersecurity Asset Inventory](articles/cybersecurity/cyber-article-18.html) | cybersecurity asset inventory for small businesses | hardware inventory; software inventory; SaaS inventory; cloud services; asset owner; data classification; asset criticality |
+| B2B Solutions | [B2B Statement of Work Checklist](articles/b2b/b2b-article-18.html) | B2B statement of work checklist | SOW template; scope exclusions; project deliverables; milestones; acceptance criteria; dependencies; change control |
+| Student Hub — Technology | [Command Line Basics](student-hub/technology/technology-lesson-10.html) | command line basics for beginners | terminal; PowerShell; Linux shell; working directory; file paths; directory navigation; safe commands |
+| Student Hub — Cybersecurity | [Cyberbullying Help](student-hub/cybersecurity/cybersecurity-lesson-10.html) | cyberbullying help for students | save evidence safely; block and report; online harassment; trusted adult; school support; platform reporting |
+| Student Hub — Business | [Customer Complaint Handling](student-hub/business/business-lesson-10.html) | customer complaint handling for small businesses | complaint procedure; complaint log; service recovery; customer feedback; escalation; root-cause review |
+| Student Hub — Digital Skills | [Digital Portfolio for Students](student-hub/digital-skills/digital-skills-lesson-10.html) | digital portfolio for students | ePortfolio; student work samples; project reflection; portfolio structure; accessibility; privacy; digital evidence |
+
+Overlap notes:
+- Webhook security focuses on authenticating and processing server-to-server event notifications; it is distinct from the site's broader API design, API integration and API rate-limiting guides.
+- Cyber asset inventory records what the organisation owns or depends on; it precedes vulnerability remediation and does not duplicate the vulnerability-management or supplier-risk guides.
+- The SOW checklist documents agreed project execution scope and acceptance after commercial selection; it complements the RFP response, procurement, project delivery and invoice-term pages.
+- Command-line basics teach safe shell navigation and file operations, not programming syntax or Git version control.
+- Cyberbullying help is a student safety response workflow; it does not duplicate phishing, account-password, voice-cloning or general online-privacy lessons.
+- Customer complaint handling is an operational service-recovery procedure, narrower than marketing, lead generation and B2B retention strategy.
+- A digital portfolio curates evidence of skills and reflection; it differs from presentation skills and general file management.
+
+For competitor/reference samples, semantic phrases, conversational question targets, content gaps, backlink-resource ideas and internal/external linking plans, see [the 20 November research brief](seo-research-brief-2026-11-20.md). The structural audit and corrected Student Hub grouping are recorded in [the 20 November site audit](seo-audit-report-2026-11-20.md).
