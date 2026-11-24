@@ -44,15 +44,23 @@ A structural review was run across all 57 publication articles and all 44 Studen
 - Cybersecurity articles generally cite primary or authoritative sources such as NIST, CISA, FTC, FBI/IC3 and national cybersecurity agencies.
 - Technology and student lessons commonly cite official documentation, standards bodies, educational institutions and vendor documentation.
 
-### Pages and source patterns needing follow-up
+### Targeted source-quality follow-up completed on 24 November 2026
 
-- **Tech Article 8:** three links point to Google SRE material. The pages opened successfully and are relevant to release engineering, canarying and service-level objectives. This is a strong source family, but it is concentrated on one publisher rather than independently triangulated.
-- **Tech Article 15:** three live links were found, but the sources are commercial/vendor or specialist service resources (ManageEngine, Venduris and RFPHub). A later review should balance vendor perspectives with neutral procurement, contract-management or standards-based material.
-- **B2B Article 19:** only one external source was present (HubSpot). A useful independent addition identified during research is APQC's customer-onboarding process guidance: https://www.apqc.org/How-to-Improve-the-Customer-Onboarding-Process. A 2026 peer-reviewed study on onboarding in software solution businesses is also available at https://journal-smr.com/index.php/smr/article/view/249. These are recommendations for a future source-list review, not claims that the article has already been updated.
-- **Student Business Lesson 1:** three SBA links were present, but all currently redirect to the same general SBA business-planning page. The destinations should be refreshed to current topic-specific or clearly anchored SBA material.
-- **Student Business Lesson 6:** three OpenStax textbook links were present. They are relevant educational sources, although all come from the same publisher.
+The initial review identified five source patterns that needed better coverage. The following source-list improvements have now been committed:
 
-The presence of a source list is not proof that every statement is accurate. The live destination check above covered the flagged links only; a complete URL-by-URL and claim-by-claim verification across all 101 pages remains outstanding.
+- **Tech Article 8 — Zero Downtime Deployment:** retained the Google SRE references and added Microsoft Azure Well-Architected guidance on progressive exposure, health checks and stopping unsafe rollouts, plus Kubernetes documentation on rolling updates, rollout monitoring and rollback. This reduces reliance on a single source family.
+- **Tech Article 15 — SaaS Renewal Checklist:** retained the practical vendor references and added FinOps Foundation resources on Licensing & SaaS and applying the FinOps Framework to SaaS. These cover software usage, renewal and exit planning, cost visibility and responsibility across procurement, finance and IT.
+- **B2B Article 19 — Sales-to-Delivery Handoff:** added APQC's customer onboarding process guidance and a 2026 Journal of Service Management Research article. The study reports an exploratory qualitative analysis involving 32 customer-success and onboarding professionals. The journal states that its articles undergo peer review.
+- **Student Business Lesson 1 — Business Basics:** replaced three SBA links that resolved to the same broad destination with more specific educational and government references: OpenStax Introduction to Business, OpenStax Entrepreneurship, the UK Government's idea-validation guidance, and the current U.S. SBA business-planning resource. The two government resources are explicitly identified by jurisdiction.
+- **Student Business Lesson 6 — Business Strategy:** retained its three relevant OpenStax textbook sections and added the Business Development Bank of Canada's strategic-planning guidance and the Government of Canada's planning-for-success guide to provide a second authoritative source family.
+
+These were reference-list changes only; the explanatory lesson/article copy and original publication dates were not rewritten.
+
+### What this source review does and does not establish
+
+The five targeted source-list gaps above have been addressed. A source list, even when stronger and more diverse, does not prove that every sentence on a page is accurate or that each source directly supports every claim. Complete URL-by-URL and claim-by-claim verification across all 101 pages remains outstanding.
+
+A separate post-remediation scan also confirmed that the unverified legacy author names no longer remain in the 101 article and Student Hub pages' author attribution fields after PR #14. That correction aligns visible legacy author labels with the publication-level attribution already used in metadata and structured data.
 
 ## Remaining E-E-A-T work
 
