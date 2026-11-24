@@ -44,14 +44,15 @@ A structural review was run across all 57 publication articles and all 44 Studen
 - Cybersecurity articles generally cite primary or authoritative sources such as NIST, CISA, FTC, FBI/IC3 and national cybersecurity agencies.
 - Technology and student lessons commonly cite official documentation, standards bodies, educational institutions and vendor documentation.
 
-### Pages that need stronger sourcing in a later content review
+### Pages and source patterns needing follow-up
 
-- **Tech Article 8:** only one external source was detected in the page.
-- **Tech Article 15:** the listed sources are mainly commercial/vendor or specialist service sites; add primary or standards-based support where the claims require it.
-- **B2B Article 19:** one external source was detected.
-- **Student Business Lessons 1 and 6:** one external source was detected on each page.
+- **Tech Article 8:** three links point to Google SRE material. The pages opened successfully and are relevant to release engineering, canarying and service-level objectives. This is a strong source family, but it is concentrated on one publisher rather than independently triangulated.
+- **Tech Article 15:** three live links were found, but the sources are commercial/vendor or specialist service resources (ManageEngine, Venduris and RFPHub). A later review should balance vendor perspectives with neutral procurement, contract-management or standards-based material.
+- **B2B Article 19:** only one external source was present (HubSpot). A useful independent addition identified during research is APQC's customer-onboarding process guidance: https://www.apqc.org/How-to-Improve-the-Customer-Onboarding-Process. A 2026 peer-reviewed study on onboarding in software solution businesses is also available at https://journal-smr.com/index.php/smr/article/view/249. These are recommendations for a future source-list review, not claims that the article has already been updated.
+- **Student Business Lesson 1:** three SBA links were present, but all currently redirect to the same general SBA business-planning page. The destinations should be refreshed to current topic-specific or clearly anchored SBA material.
+- **Student Business Lesson 6:** three OpenStax textbook links were present. They are relevant educational sources, although all come from the same publisher.
 
-The presence of a source list is not proof that every statement is accurate. A source-by-source destination check and claim-level verification across all 101 pages remain outstanding. No claim is made here that every external URL was live-tested.
+The presence of a source list is not proof that every statement is accurate. The live destination check above covered the flagged links only; a complete URL-by-URL and claim-by-claim verification across all 101 pages remains outstanding.
 
 ## Remaining E-E-A-T work
 
