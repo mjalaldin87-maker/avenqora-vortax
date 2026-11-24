@@ -1,8 +1,8 @@
 # Avenqora Vortax — Existing Content Keyword Map
 
-Last reviewed: 20 November 2026
+Last reviewed: 24 November 2026
 
-This is the current editorial planning document for **94 published content pages**: the original 66-page baseline plus seven pages published on each of 17, 18, 19 and 20 November 2026. Each page has one primary search intent to protect; supporting phrases are topical variations and question themes, not claims of search volume. Do not add keywords mechanically or repeat them unnaturally. Check Search Console query-to-page data before changing a page's target.
+This is the current editorial planning document for **101 published content pages**: the original 66-page baseline plus seven pages published on each of 17, 18, 19, 20 and 24 November 2026. Each page has one primary search intent to protect; supporting phrases are topical variations and question themes, not claims of search volume. Do not add keywords mechanically or repeat them unnaturally. Check Search Console query-to-page data before changing a page's target.
 
 ## Tech & SaaS publication
 
@@ -230,3 +230,36 @@ Overlap notes:
 - A digital portfolio curates evidence of skills and reflection; it differs from presentation skills and general file management.
 
 For competitor/reference samples, semantic phrases, conversational question targets, content gaps, backlink-resource ideas and internal/external linking plans, see [the 20 November research brief](seo-research-brief-2026-11-20.md). The structural audit and corrected Student Hub grouping are recorded in [the 20 November site audit](seo-audit-report-2026-11-20.md).
+
+
+---
+
+## New content targets added on 24 November 2026
+
+These seven pages extend the content inventory from 94 to **101 published content pages**. Each target was checked against the current map and recent adjacent pages. The phrases are intent-led editorial targets, not verified search-volume or keyword-difficulty measurements.
+
+| Section | New page | Primary target | Supporting cluster |
+|---|---|---|---|
+| Tech & SaaS | [SaaS User Provisioning and Deprovisioning](articles/tech/tech-article-19.html) | SaaS user provisioning checklist | user deprovisioning; joiner mover leaver; identity lifecycle; SCIM provisioning; access review; least privilege; SaaS account management |
+| Cybersecurity | [Email Authentication for Small Businesses](articles/cybersecurity/cyber-article-19.html) | email authentication for small businesses | SPF record; DKIM signing; DMARC policy; email spoofing; DMARC reports; sender inventory; domain authentication |
+| B2B Solutions | [B2B Sales-to-Delivery Handoff Checklist](articles/b2b/b2b-article-19.html) | B2B sales to delivery handoff checklist | sales handoff process; customer onboarding handoff; closed-won checklist; implementation readiness; technical dependencies; stakeholder transfer |
+| Student Hub — Technology | [DNS Basics for Beginners](student-hub/technology/technology-lesson-11.html) | DNS basics for beginners | domain names; IP addresses; recursive resolver; authoritative nameserver; DNS records; A record; CNAME; TTL |
+| Student Hub — Cybersecurity | [QR Code Phishing (Quishing)](student-hub/cybersecurity/cybersecurity-lesson-11.html) | QR code phishing for students | quishing; malicious QR codes; URL preview; fake sign-in page; QR safety; phishing links |
+| Student Hub — Business | [Cash Flow Forecasting](student-hub/business/business-lesson-11.html) | cash flow forecasting for small businesses | cash receipts; cash payments; opening balance; closing balance; working capital; cash flow spreadsheet; payment timing |
+| Student Hub — Digital Skills | [Digital Note-Taking for Students](student-hub/digital-skills/digital-skills-lesson-11.html) | digital note-taking for students | Cornell notes; outline notes; concept mapping; lecture notes; active recall; study review; organised digital notes |
+
+### Overlap checks
+
+- SaaS access lifecycle management is about granting, changing and removing an individual's application permissions. It is not another general SaaS architecture, API or software inventory page.
+- SPF, DKIM and DMARC are domain-level email-authentication controls. This differs from phishing-awareness and business-email-compromise response content: the new guide focuses on sender-domain configuration and gradual enforcement.
+- The sales-to-delivery handoff focuses on transfer of customer context and implementation readiness after a deal is approved. It complements, rather than replaces, CRM, project delivery and the statement-of-work guide.
+- DNS fundamentals explain name resolution and common records; the lesson does not repeat the broader computer-networking or command-line lessons.
+- QR-code phishing is a narrow link-delivery and social-engineering pattern, separate from voice-cloning scams, general safe browsing and cyberbullying support.
+- Cash-flow forecasting estimates the timing of money received and paid; it is distinct from profit-and-loss statements and break-even calculations.
+- Digital note-taking teaches capture, structure and review of class learning; it is not a repeat of PDF annotation, file management, source citation or digital portfolios.
+
+### Search Console targeting rule
+
+The existing broad API-integration query cluster remains assigned to Tech Article 11. Do not retarget it through this batch. Review Search Console query-to-page data before changing targets. No keyword volumes, difficulty scores, live Google People Also Ask placements or ranking forecasts are claimed.
+
+For competitor/reference samples, semantic terms, five conversational question targets per topic, content gaps, original resource ideas and the linking plan, see [the 24 November research brief](seo-research-brief-2026-11-24.md). The source and indexing audit is recorded in [the 24 November site audit](seo-audit-report-2026-11-24.md).
