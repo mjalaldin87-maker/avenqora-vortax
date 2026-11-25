@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Software Testing Fundamentals: Test Types, Levels and Simple Examples | Avenqora Vortax</title>
+<meta name="description" content="Learn software testing basics, including test cases, expected results, static and dynamic testing, test levels, defects and beginner practice.">
+<meta name="robots" content="index, follow"><meta name="author" content="Avenqora Vortax Editorial Desk">
+<link rel="canonical" href="https://avenqoravortax.com/student-hub/technology/technology-lesson-12.html">
+<meta property="og:type" content="article"><meta property="og:title" content="Software Testing Fundamentals: Test Types, Levels and Simple Examples | Avenqora Vortax">
+<meta property="og:description" content="Learn software testing basics, including test cases, expected results, static and dynamic testing, test levels, defects and beginner practice."><meta property="og:url" content="https://avenqoravortax.com/student-hub/technology/technology-lesson-12.html">
+<meta property="og:image" content="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=1400&q=85"><meta property="og:site_name" content="Avenqora Vortax">
+<meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="Software Testing Fundamentals: Test Types, Levels and Simple Examples | Avenqora Vortax">
+<meta name="twitter:description" content="Learn software testing basics, including test cases, expected results, static and dynamic testing, test levels, defects and beginner practice."><meta name="twitter:image" content="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=1400&q=85">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"LearningResource","name":"Software Testing Fundamentals: Test Types, Levels and Simple Examples","description":"Learn software testing basics, including test cases, expected results, static and dynamic testing, test levels, defects and beginner practice.","url":"https://avenqoravortax.com/student-hub/technology/technology-lesson-12.html","image":"https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=1400&q=85","learningResourceType":"Lesson","educationalLevel":"Beginner","inLanguage":"en","isAccessibleForFree":true,"dateCreated":"2026-11-25","dateModified":"2026-11-25","timeRequired":"PT35M","author":{"@type":"Organization","name":"Avenqora Vortax Editorial Desk","url":"https://avenqoravortax.com/team.html"},"publisher":{"@type":"Organization","name":"Avenqora Vortax","url":"https://avenqoravortax.com/"},"teaches":["software testing fundamentals","test cases and expected results","static and dynamic testing","unit, integration, system and acceptance testing","defects and regression testing"]}</script>
+<link rel="stylesheet" href="../../style.css">
+</head>
+<body>
+<header class="site-header"><div class="container header-inner"><a class="site-logo" href="../../index.html">Avenqora Vortax</a>
+<button class="menu-toggle" type="button" aria-label="Open navigation" aria-expanded="false" data-menu-button>☰</button>
+<nav class="main-nav" aria-label="Main navigation" data-navigation><a href="../../index.html">Home</a><a href="../../tech-saas.html">Tech &amp; SaaS</a><a href="../../cybersecurity.html">Cybersecurity</a><a href="../../b2b.html">B2B Solutions</a><a href="../../student-hub.html">Student Hub</a><a href="../../search.html">Search</a></nav></div></header>
+<main><article>
+<section class="article-hero"><div class="container article-hero-content">
+<span class="eyebrow">Student Hub · Technology</span><h1>Software Testing Fundamentals: Test Types, Levels and Simple Examples</h1><p class="article-intro">Software testing helps teams evaluate whether a product behaves as expected and whether it meets user and business needs. This beginner lesson explains what testing does, how common test levels differ and how to write a simple test case.</p>
+<div class="article-meta"><span>Prepared by <a href="../../team.html">Avenqora Vortax Editorial Desk</a></span><time datetime="2026-11-25">November 25, 2026</time><span>Beginner lesson · 35-minute lesson</span></div>
+<a href="../../student-hub.html#technology">Back to Student Hub lessons</a>
+</div></section>
+<section class="section article-section"><div class="container article-layout"><div class="article-main">
+<figure class="article-feature-figure"><img class="article-feature-image" src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=1400&q=85" alt="Laptop workstation representing software development and quality checks" loading="lazy" decoding="async"><figcaption>Laptop workstation representing software development and quality checks. Image served externally; Avenqora Vortax does not host the image file.</figcaption></figure>
+<div class="article-content">
+
+<p><strong>Software testing is a set of activities used to evaluate software quality and reduce the risk of failure.</strong> It is not limited to clicking through an application after development. Testing can include reviewing requirements, checking designs, analysing code, executing the product and reporting what the evidence shows.</p>
+<h2>Why do teams test software?</h2>
+<p>Software can fail because requirements are unclear, code contains defects, data is unusual, services are unavailable or users follow a path that designers did not expect. Testing provides information about quality and risk before a change is released. It can find problems, check whether requirements are met and help a team decide what needs more attention.</p>
+<p>Testing cannot prove that a complex system has no defects. A useful test reduces uncertainty for a defined scope. The result should be interpreted alongside the tests that were not run, the data used and the environments covered.</p>
+<h2>Test cases: inputs, actions and expected results</h2>
+<p>A test case describes a situation to check. A simple test case usually records the objective, preconditions, input data, steps and expected result. The tester then records the actual result and whether it passed or failed.</p>
+<p><strong>Illustrative example:</strong> A student portal has a sign-in form. A test case might start with an active test account, enter a valid username and password, select Sign in and expect the dashboard to open. A second case might enter an incorrect password and expect a clear error without exposing account details. These examples explain the structure of a test; they are not results from a real test of a production service.</p>
+<h2>Static testing and dynamic testing</h2>
+<p><strong>Static testing</strong> evaluates a work product without running the software. Examples include reviewing a requirement, inspecting a design, checking a spreadsheet specification or using static-analysis tools on source code. It can reveal unclear instructions and defects early.</p>
+<p><strong>Dynamic testing</strong> involves executing software and observing its behaviour. It may include manual tests, automated checks or exploratory testing. Both approaches are useful: a program can behave incorrectly because its code has a defect, but a requirement can also be incomplete before any code exists.</p>
+<h2>Common test levels</h2>
+<ul>
+<li><strong>Component or unit testing:</strong> checks an individual function, class or component in isolation, often with controlled dependencies.</li>
+<li><strong>Integration testing:</strong> checks whether connected components or systems work correctly together and exchange information as expected.</li>
+<li><strong>System testing:</strong> evaluates the complete integrated system against its specified requirements.</li>
+<li><strong>Acceptance testing:</strong> evaluates whether the system is ready for its intended users, business purpose or acceptance conditions.</li>
+</ul>
+<p>These levels answer different questions. A unit test may show that a calculation works in isolation, while an integration test may reveal that the application sends the wrong value to a payment service. A system test checks the complete journey, and acceptance testing focuses on whether the solution is suitable for the agreed use.</p>
+<h2>Test types and test objectives</h2>
+<p>Functional testing asks whether a feature produces the required behaviour. Non-functional testing examines qualities such as performance, usability, reliability, security and compatibility. Regression testing checks whether a change has unintentionally affected existing behaviour. Confirmation testing checks whether a previously reported defect has been corrected.</p>
+<p>Choose tests according to risk. A payment workflow deserves careful testing of amounts, currencies, failed transactions and duplicate submissions. A content page may need checks for links, layout, accessibility and readability. Not every product needs the same test plan.</p>
+<h2>Defects, failures and useful reports</h2>
+<p>A defect is a flaw in a work product. A failure is an observed event in which a system does not perform as expected. A useful defect report includes a short title, environment, steps to reproduce, expected behaviour, actual behaviour, evidence and severity or impact. Avoid reporting only “it does not work.”</p>
+<p>Severity describes the impact of a problem; priority describes how urgently a team chooses to address it. A defect may be highly severe but difficult to reproduce, or low in severity but easy to fix. Teams should use their agreed definitions rather than assuming every organization labels these issues identically.</p>
+<h2>Practice task: write three test cases</h2>
+<p>Choose a familiar non-production example, such as a library search page. Write one test for a normal search, one for a search with no matching results and one for an empty search box. For each case, record preconditions, input, steps and expected result. Then consider one edge case, such as a very long search phrase or punctuation.</p>
+<p>Do not test against someone else's account or a live payment service without permission. Practise with a classroom project, local demo or system you are authorised to use.</p>
+<h2>Frequently asked questions</h2>
+<h3>Is software testing the same as debugging?</h3>
+<p>No. Testing evaluates software and provides evidence of failures or quality. Debugging investigates the cause of a defect and changes the implementation to correct it. They often work together but are different activities.</p>
+<h3>Does passing every test mean software is defect-free?</h3>
+<p>No. Tests cover selected conditions. Passing results show that those checks met their expected outcomes in the tested environment; they do not prove that every possible input or situation is safe.</p>
+<h3>Should testing start only after coding?</h3>
+<p>No. Teams can review requirements, user stories, designs and risks before code exists. Early reviews can reveal misunderstandings before they become expensive changes.</p>
+<h3>What is regression testing?</h3>
+<p>Regression testing checks whether a change has caused unintended problems in previously working areas. Teams select regression tests based on the parts of the product affected and the risk of side effects.</p>
+<h2>Key takeaway</h2><p>Learn software testing basics, including test cases, expected results, static and dynamic testing, test levels, defects and beginner practice. Use the practice task to check your understanding, then consult the official references for more detail.</p>
+</div></div></div></section>
+<section class="section section-soft"><div class="container"><div class="article-content">
+<h2>Related lessons and practical guides</h2><p>Continue learning with these connected resources:</p><ul><li><a href="technology-lesson-3.html">How APIs Work</a> — Understand interfaces between software components.</li><li><a href="technology-lesson-7.html">Programming Fundamentals for Beginners</a> — Review the logic that tests often check.</li><li><a href="../../articles/tech/tech-article-20.html">SaaS Accessibility: A Practical WCAG 2.2 Checklist</a> — See an example of quality checks for user-facing software.</li></ul>
+<h2>Further reading</h2><ul><li><strong>ISTQB:</strong> <a href="https://istqb.org/wp-content/uploads/2024/11/ISTQB_CTFL_Syllabus_v4.0.1.pdf" target="_blank" rel="noopener noreferrer">Certified Tester Foundation Level Syllabus v4.0.1</a></li><li><strong>ISTQB:</strong> <a href="https://istqb.org/certifications/certified-tester-foundation-level-ctfl-v4-0/" target="_blank" rel="noopener noreferrer">Certified Tester Foundation Level (CTFL) v4.0 Overview</a></li></ul>
+</div></div></section>
+</article></main><script src="../../script.js" defer></script></body></html>
