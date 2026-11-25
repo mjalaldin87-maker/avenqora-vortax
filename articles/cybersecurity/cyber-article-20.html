@@ -67,7 +67,7 @@
 <ol>
 <li><strong>Report it quickly.</strong> Contact the organization's IT or security team using a known channel. Do not reply to the suspicious message or use its contact details.</li>
 <li><strong>Identify the application and scope.</strong> Record its name, publisher, consent time, user, requested permissions and any related message or link.</li>
-<li><strong>Revoke or disable the grant safely.</strong> An administrator should follow the identity provider's documented procedure to remove the consent and block the application where appropriate. Do not assume that deleting a user password alone removes application access.</li>
+<li><strong>Revoke or disable the grant safely.</strong> An administrator should follow the identity provider's documented procedure to remove the consent and block the application where appropriate. Depending on the platform, disabling an application may stop new token requests while an already-issued access token remains valid until it expires. Verify the provider's current token-revocation options and monitor activity until containment is confirmed. Do not assume that deleting a user password alone removes application access.</li>
 <li><strong>Review activity.</strong> Check sign-in and audit logs, mailbox rules, forwarding settings, file access and other actions the app could have performed, depending on its permissions.</li>
 <li><strong>Contain related access.</strong> Reset credentials or revoke sessions when the investigation indicates those steps are necessary, and check for other compromised accounts or applications.</li>
 <li><strong>Preserve evidence and communicate.</strong> Keep timestamps and relevant logs, follow the organization's incident process and notify affected people when required.</li>
